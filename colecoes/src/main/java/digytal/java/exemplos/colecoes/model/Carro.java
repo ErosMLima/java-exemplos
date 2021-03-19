@@ -5,6 +5,13 @@ public class Carro {
 	private String chassi;
 	private String nome;
 	private Integer ano;
+	private Marca marca;
+	public Marca getMarca() {
+		return marca;
+	}
+	public void setMarca(Marca marca) {
+		this.marca = marca;
+	}
 	public Integer getAno() {
 		return ano;
 	}
@@ -32,17 +39,20 @@ public class Carro {
 	public Carro() {
 		
 	}
-	public Carro(String placa, String chassi, String nome, Integer ano) {
+	public Carro(String placa, String chassi, String nome, Integer ano, Marca marca) {
 		super();
 		this.placa = placa;
 		this.chassi = chassi;
 		this.nome = nome;
 		this.ano=ano;
+		this.marca = marca;
 	}
 	@Override
 	public String toString() {
-		return "Carro [placa=" + placa + ", chassi=" + chassi + ", nome=" + nome + ", ano=" + ano + "]";
+		return "Carro [placa=" + placa + ", chassi=" + chassi + ", nome=" + nome + ", ano=" + ano + ", marca=" + marca
+				+ "]";
 	}
+	
 	
 	
 }
