@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import digytal.java.exemplos.colecoes.model.Carro;
+import digytal.java.exemplos.colecoes.model.CarroDto;
 import digytal.java.exemplos.colecoes.model.Marca;
 import digytal.java.exemplos.colecoes.repository.Repository;
 import digytal.java.exemplos.colecoes.stream.predicate.Predicates;
@@ -23,8 +24,12 @@ public class ExemploStream {
 		//forEach();
 		//filter();
 		//predicate("FORD", 2020);
-		prePredicate(Marca.JEEP);
+		//prePredicate(Marca.JEEP);
+		//map();
+		
+		mapObject();
 	}
+	//INTERAÇÃO
 	static void forEach() {
 		List<Carro> carros = Repository.listCarros();
 		
@@ -37,7 +42,7 @@ public class ExemploStream {
 		System.out.println("\nJAVA 8 - STREAM ForEach");
 		carros.forEach(c->System.out.println(c));
 	}
-	
+	//FILTROS
 	static void filter() {
 		System.out.println("FILTRANDO CARROS COM ANO MAIOR OU IGUAL 2020\n");
 		List<Carro> carros = Repository.listCarros()
@@ -63,8 +68,6 @@ public class ExemploStream {
 		carros.forEach(c->System.out.println(c));
 	}
 	static void prePredicate(Marca marca) {
-		
-		
 		System.out.println("FILTRANDO CARROS COM ANO MAIOR OU IGUAL 2020\n");
 		List<Carro> carros = Repository.listCarros()
 				  .stream()
@@ -73,5 +76,46 @@ public class ExemploStream {
 		
 		
 		carros.forEach(c->System.out.println(c));
+	}
+	//CONVERSAO
+	static void map() {
+		cabecalho("CONVERTENDO LISTAS");
+		cabecalho("OBTENDO SOMENTE O NOME DOS CARROS");
+		rodape();
+		List<Carro> carros = Repository.listCarros();
+		
+		List<String> nomes = carros.stream().map(c-> c.getNome()).collect(Collectors.toList());
+		
+		nomes.forEach(c->System.out.println(c));
+		rodape();
+	}
+	static void mapObject() {
+		cabecalho("CONVERTENDO LISTA DE OBJETOS PARA OUTROS OBJETOS");
+		rodape();
+		List<Carro> carros = Repository.listCarros();
+		
+		List<CarroDto> carrosDto = carros.stream()
+					
+				.map(c-> {
+					
+					CarroDto dto = new CarroDto();
+					dto.setNome(c.getNome());
+					dto.setMarca(c.getMarca().getNome());
+					dto.setPais(c.getMarca().getPais());
+					return dto;
+					
+				})
+				
+				.collect(Collectors.toList());
+		
+		carrosDto.forEach(c->System.out.println(c));
+		rodape();
+	}
+	static void rodape() {
+		System.out.println("---------------------------------------------------------------------------");
+	}
+	static void cabecalho(String titulo) {
+		System.out.println("---------------------------------------------------------------------------");
+		System.out.println(titulo);
 	}
 }
