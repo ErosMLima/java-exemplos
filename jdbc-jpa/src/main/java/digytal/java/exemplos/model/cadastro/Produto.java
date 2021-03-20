@@ -1,9 +1,19 @@
 package digytal.java.exemplos.model.cadastro;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tab_produto")
 public class Produto {
+	@Id
 	private Integer id;
+	@Column(name = "codigo_barras")
 	private String codigoBarras;
 	private String nome;
+	@Column(name = "valor_venda")
 	private Double valorVenda;
 	public Integer getId() {
 		return id;

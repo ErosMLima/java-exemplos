@@ -10,6 +10,7 @@ import java.util.List;
 
 import digytal.java.exemplos.model.cadastro.Produto;
 import digytal.java.exemplos.repository.Repository;
+import digytal.java.exemplos.util.StartHSQLDB;
 
 public class JdbcProdutoRepository implements Repository<Produto> {
 	private Connection connecton;
@@ -19,7 +20,7 @@ public class JdbcProdutoRepository implements Repository<Produto> {
 			
 			//create table tab_produto(id int, nome varchar (50), codigo_barras varchar (20),valor_venda numeric (8,2));
 			
-			connecton= DriverManager.getConnection("jdbc:hsqldb:file:/temp/db/exemplo-db", "SA", "");
+			connecton= DriverManager.getConnection(StartHSQLDB.JDBC_FILE_URL, "SA", "");
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		} 
@@ -42,7 +43,7 @@ public class JdbcProdutoRepository implements Repository<Produto> {
 		
 	}
 
-	public void update(Integer id, Produto e) {
+	public void update(Produto e) {
 		try {
 			PreparedStatement st = connecton.prepareStatement("UPDATE tab_produto set nome=?,codigo_barras=?,valor_venda=? WHERE ID = ?");
 			st.setString(1, e.getNome());

@@ -9,12 +9,27 @@ import digytal.java.exemplos.model.venda.PedidoItem;
 import digytal.java.exemplos.repository.fake.FakeCadastroRepostory;
 import digytal.java.exemplos.repository.fake.FakeProdutoRepostory;
 import digytal.java.exemplos.repository.jdbc.JdbcProdutoRepository;
+import digytal.java.exemplos.repository.jpa.JpaProdutoRepository;
 
 public class SistemaLivraria {
 	
 	public static void main(String[] args) {
 		//fakeRepository();
-		jdbcRepository();
+		//jdbcRepository();
+		//jpaRepository();
+	}
+	private static void jpaRepository() {
+		JpaProdutoRepository produtoRepository = new JpaProdutoRepository();
+		
+		Produto produto = new Produto();
+		produto.setId(2);
+		produto.setCodigoBarras("89898");
+		produto.setNome("O MONGE E O EXECUTIVO");
+		produto.setValorVenda(19.35);
+		produtoRepository.insert(produto);		
+		//o HSQL DB PRECISA FECHAR a conexao
+		produtoRepository.fechar();
+		//System.exit(0);
 	}
 	private static void jdbcRepository() {
 		JdbcProdutoRepository produtoRepository = new JdbcProdutoRepository();
@@ -30,7 +45,7 @@ public class SistemaLivraria {
 		
 		//o HSQL DB PRECISA FECHAR a conexao
 		produtoRepository.fechar();
-		
+		//System.exit(0);
 	}
 	private static void fakeRepository() {
 		FakeCadastroRepostory cadastroRepositorio = new FakeCadastroRepostory();

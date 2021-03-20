@@ -9,12 +9,13 @@ import org.hsqldb.util.DatabaseManagerSwing;
 
 import digytal.java.exemplos.model.venda.Pedido;
 import digytal.java.exemplos.repository.Repository;
+import digytal.java.exemplos.util.StartHSQLDB;
 
 public class JdbcPedidoRepository implements Repository<Pedido> {
 	private Connection connecton;
 	public JdbcPedidoRepository() {
 		try {
-			connecton= DriverManager.getConnection("jdbc:hsqldb:file:/temp/db/exemplo-db", "SA", "");
+			connecton= DriverManager.getConnection(StartHSQLDB.JDBC_FILE_URL, "SA", "");
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		} 
@@ -24,7 +25,7 @@ public class JdbcPedidoRepository implements Repository<Pedido> {
 		
 	}
 
-	public void update(Integer id, Pedido e) {
+	public void update(Pedido e) {
 		
 	}
 	public Pedido select(Integer id) {

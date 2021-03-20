@@ -15,8 +15,8 @@ public class FakeRepository <E> implements Repository<E> {
 		dados.put(dados.size() + 1, e);
 	}
 	
-	public void update(Integer id, E e) {
-		dados.put(id, e);
+	public void update(E e) {
+		//dados.put(id, e);
 	}
 	
 	public E select(Integer id) {
