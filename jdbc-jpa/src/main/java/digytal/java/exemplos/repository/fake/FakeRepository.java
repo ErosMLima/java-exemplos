@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FakeRepository <E> {
+import digytal.java.exemplos.repository.Repository;
+
+public class FakeRepository <E> implements Repository<E> {
 	//repositorio - em memoria - atraves de um map
 	private Map<Integer, E> dados = new HashMap<Integer, E>();
 
@@ -21,7 +23,6 @@ public class FakeRepository <E> {
 		return dados.get(id);
 	}
 
-	
 
 	public List<E> selectAll() {
 		return new ArrayList<E>(dados.values());

@@ -3,7 +3,7 @@ package digytal.java.exemplos.model.cadastro;
 public class Produto {
 	private Integer id;
 	private String codigoBarras;
-	private String titulo;
+	private String nome;
 	private Double valorVenda;
 	public Integer getId() {
 		return id;
@@ -17,11 +17,11 @@ public class Produto {
 	public void setCodigoBarras(String codigoBarras) {
 		this.codigoBarras = codigoBarras;
 	}
-	public String getTitulo() {
-		return titulo;
+	public String getNome() {
+		return nome;
 	}
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public Double getValorVenda() {
 		return valorVenda;

@@ -8,22 +8,40 @@ import digytal.java.exemplos.model.venda.Pedido;
 import digytal.java.exemplos.model.venda.PedidoItem;
 import digytal.java.exemplos.repository.fake.FakeCadastroRepostory;
 import digytal.java.exemplos.repository.fake.FakeProdutoRepostory;
+import digytal.java.exemplos.repository.jdbc.JdbcProdutoRepository;
 
 public class SistemaLivraria {
 	
 	public static void main(String[] args) {
-		fakeRepository();
+		//fakeRepository();
+		jdbcRepository();
 	}
-	
+	private static void jdbcRepository() {
+		JdbcProdutoRepository produtoRepository = new JdbcProdutoRepository();
+		
+		Produto produto = new Produto();
+		produto.setId(1);
+		produto.setCodigoBarras("123123");
+		produto.setNome("A CINCO PESSOAS QUE VC ENCONTRA NO CEU");
+		produto.setValorVenda(17.00);
+		produtoRepository.insert(produto);
+		
+		
+		
+		//o HSQL DB PRECISA FECHAR a conexao
+		produtoRepository.fechar();
+		
+	}
 	private static void fakeRepository() {
 		FakeCadastroRepostory cadastroRepositorio = new FakeCadastroRepostory();
-		FakeProdutoRepostory livroRepositorio = new FakeProdutoRepostory();
+		FakeProdutoRepostory produtoRepository = new FakeProdutoRepostory();
 		
-		Produto livro = new Produto();
-		livro.setCodigoBarras("123123");
-		livro.setTitulo("A CINCO PESSOAS QUE VC ENCONTRA NO CEU");
-		livro.setValorVenda(17.00);
-		livroRepositorio.insert(livro);
+		Produto produto = new Produto();
+		produto.setId(1);
+		produto.setCodigoBarras("123123");
+		produto.setNome("A CINCO PESSOAS QUE VC ENCONTRA NO CEU");
+		produto.setValorVenda(17.00);
+		produtoRepository.insert(produto);
 		
 		Cadastro cadastro = new Cadastro();
 		cadastro.setEmail("gleyson@digytal.com.br");
@@ -37,14 +55,14 @@ public class SistemaLivraria {
 		p.setCliente(c);
 		p.setData(new Date());
 		
-		Produto produto = livroRepositorio.select(1);
+		produto = produtoRepository.select(1);
 		
 		p.addItem(produto, 10.0);
 		
 		System.out.println(p.getValorTotal());
 		
 		for(PedidoItem i: p.getItens()) {
-			System.out.println(i.getProduto().getTitulo() + " -- " + i.getQuantidade() + " " + i.getValorVenda() + " " + i.getValorTotal());
+			System.out.println(i.getProduto().getNome() + " -- " + i.getQuantidade() + " " + i.getValorVenda() + " " + i.getValorTotal());
 		}
 	}
 }
