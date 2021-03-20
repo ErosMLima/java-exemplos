@@ -1,4 +1,4 @@
-package digytal.java.exemplos.repository;
+package digytal.java.exemplos.jdbcjpa.repository;
 
 import java.util.List;
 

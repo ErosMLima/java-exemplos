@@ -1,4 +1,4 @@
-package digytal.java.exemplos.model.cadastro;
+package digytal.java.exemplos.jdbcjpa.model.cadastro;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

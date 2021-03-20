@@ -1,4 +1,4 @@
-package digytal.java.exemplos.repository.jdbc;
+package digytal.java.exemplos.jdbcjpa.repository.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,9 +8,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import digytal.java.exemplos.model.cadastro.Produto;
-import digytal.java.exemplos.repository.Repository;
-import digytal.java.exemplos.util.StartHSQLDB;
+import digytal.java.exemplos.jdbcjpa.model.cadastro.Produto;
+import digytal.java.exemplos.jdbcjpa.repository.Repository;
+import digytal.java.exemplos.jdbcjpa.util.StartHSQLDB;
 
 public class JdbcProdutoRepository implements Repository<Produto> {
 	private Connection connecton;

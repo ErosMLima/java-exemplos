@@ -1,4 +1,4 @@
-package digytal.java.exemplos.repository.jpa;
+package digytal.java.exemplos.jdbcjpa.repository.jpa;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import digytal.java.exemplos.model.cadastro.Produto;
-import digytal.java.exemplos.repository.Repository;
+import digytal.java.exemplos.jdbcjpa.model.cadastro.Produto;
+import digytal.java.exemplos.jdbcjpa.repository.Repository;
 
 public class JpaProdutoRepository implements Repository<Produto> {
 	private EntityManager entityManager;

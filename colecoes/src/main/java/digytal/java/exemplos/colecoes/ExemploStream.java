@@ -1,4 +1,4 @@
-package digytal.java.exemplos.colecoes.stream;
+package digytal.java.exemplos.colecoes;
 
 import java.util.List;
 import java.util.function.Predicate;

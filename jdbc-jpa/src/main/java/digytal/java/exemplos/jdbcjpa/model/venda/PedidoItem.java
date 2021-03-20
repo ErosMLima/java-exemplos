@@ -1,6 +1,6 @@
-package digytal.java.exemplos.model.venda;
+package digytal.java.exemplos.jdbcjpa.model.venda;
 
-import digytal.java.exemplos.model.cadastro.Produto;
+import digytal.java.exemplos.jdbcjpa.model.cadastro.Produto;
 
 public class PedidoItem {
 	private Integer id;

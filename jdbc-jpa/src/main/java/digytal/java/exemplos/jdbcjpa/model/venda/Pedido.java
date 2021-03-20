@@ -1,11 +1,11 @@
-package digytal.java.exemplos.model.venda;
+package digytal.java.exemplos.jdbcjpa.model.venda;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import digytal.java.exemplos.model.cadastro.Cadastro;
-import digytal.java.exemplos.model.cadastro.Produto;
+import digytal.java.exemplos.jdbcjpa.model.cadastro.Cadastro;
+import digytal.java.exemplos.jdbcjpa.model.cadastro.Produto;
 
 public class Pedido {
 	private Integer id;

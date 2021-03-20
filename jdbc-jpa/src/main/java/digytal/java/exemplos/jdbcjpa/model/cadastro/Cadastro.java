@@ -1,4 +1,4 @@
-package digytal.java.exemplos.model.cadastro;
+package digytal.java.exemplos.jdbcjpa.model.cadastro;
 
 public class Cadastro {
 	private Integer id;

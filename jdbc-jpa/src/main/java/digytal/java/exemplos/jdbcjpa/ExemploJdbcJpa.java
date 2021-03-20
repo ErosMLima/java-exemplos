@@ -1,17 +1,17 @@
-package digytal.java.exemplos;
+package digytal.java.exemplos.jdbcjpa;
 
 import java.util.Date;
 
-import digytal.java.exemplos.model.cadastro.Cadastro;
-import digytal.java.exemplos.model.cadastro.Produto;
-import digytal.java.exemplos.model.venda.Pedido;
-import digytal.java.exemplos.model.venda.PedidoItem;
-import digytal.java.exemplos.repository.fake.FakeCadastroRepostory;
-import digytal.java.exemplos.repository.fake.FakeProdutoRepostory;
-import digytal.java.exemplos.repository.jdbc.JdbcProdutoRepository;
-import digytal.java.exemplos.repository.jpa.JpaProdutoRepository;
+import digytal.java.exemplos.jdbcjpa.model.cadastro.Cadastro;
+import digytal.java.exemplos.jdbcjpa.model.cadastro.Produto;
+import digytal.java.exemplos.jdbcjpa.model.venda.Pedido;
+import digytal.java.exemplos.jdbcjpa.model.venda.PedidoItem;
+import digytal.java.exemplos.jdbcjpa.repository.fake.FakeCadastroRepostory;
+import digytal.java.exemplos.jdbcjpa.repository.fake.FakeProdutoRepostory;
+import digytal.java.exemplos.jdbcjpa.repository.jdbc.JdbcProdutoRepository;
+import digytal.java.exemplos.jdbcjpa.repository.jpa.JpaProdutoRepository;
 
-public class SistemaLivraria {
+public class ExemploJdbcJpa {
 	
 	public static void main(String[] args) {
 		//fakeRepository();

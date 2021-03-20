@@ -1,4 +1,4 @@
-package digytal.java.exemplos.repository.jdbc;
+package digytal.java.exemplos.jdbcjpa.repository.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.hsqldb.util.DatabaseManagerSwing;
 
-import digytal.java.exemplos.model.venda.Pedido;
-import digytal.java.exemplos.repository.Repository;
-import digytal.java.exemplos.util.StartHSQLDB;
+import digytal.java.exemplos.jdbcjpa.model.venda.Pedido;
+import digytal.java.exemplos.jdbcjpa.repository.Repository;
+import digytal.java.exemplos.jdbcjpa.util.StartHSQLDB;
 
 public class JdbcPedidoRepository implements Repository<Pedido> {
 	private Connection connecton;

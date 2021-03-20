@@ -1,4 +1,4 @@
-package digytal.java.exemplos.util;
+package digytal.java.exemplos.jdbcjpa.util;
 
 import org.hsqldb.util.DatabaseManagerSwing;
 

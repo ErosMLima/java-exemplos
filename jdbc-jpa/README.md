@@ -2,8 +2,10 @@
 www.digytal.com.br
 (11) 95894 0362
 
-# Java Exemplos
-Projeto open source para demonstrar recursos e exemplos utilizando a linguagem Java
+# Java Exemplos - Coleções
 
-> Este repositório tem como finalizar apresentar exemplos que exploram os recursos da linguagem Java como referência para o desenvolvimento de funcionalidades das variadas finalidades.
+Projeto open source para demonstrar exemplo de persistência com JDBC e JPA
 
+> Este repositório tem como finalidade apresentar os recursos de persistência com JDBC e JPA
+
+- Execute a classe `digytal.java.exemplos.jdbcjpa.ExemploJdbcJpa`.

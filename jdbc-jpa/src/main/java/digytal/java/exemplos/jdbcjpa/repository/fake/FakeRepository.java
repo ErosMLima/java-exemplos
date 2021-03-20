@@ -1,11 +1,11 @@
-package digytal.java.exemplos.repository.fake;
+package digytal.java.exemplos.jdbcjpa.repository.fake;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import digytal.java.exemplos.repository.Repository;
+import digytal.java.exemplos.jdbcjpa.repository.Repository;
 
 public class FakeRepository <E> implements Repository<E> {
 	//repositorio - em memoria - atraves de um map
