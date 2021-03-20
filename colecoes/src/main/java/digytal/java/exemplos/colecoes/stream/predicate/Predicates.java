@@ -9,4 +9,7 @@ public class Predicates {
 	public static Predicate<Carro> carroMarcaPredicate(Marca marca){
 		return c -> c.getMarca() == marca;
 	}
+	public static Predicate<Carro> carroMarcaFordPredicate(){
+		return carroMarcaPredicate(Marca.FORD);
+	}
 }

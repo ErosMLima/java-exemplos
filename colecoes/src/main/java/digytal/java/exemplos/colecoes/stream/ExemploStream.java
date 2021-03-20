@@ -40,16 +40,15 @@ public class ExemploStream {
 		}
 		
 		System.out.println("\nJAVA 8 - STREAM ForEach");
-		carros.forEach(c->System.out.println(c));
+		carros.forEach( c-> System.out.println(c) );
 	}
 	//FILTROS
 	static void filter() {
 		System.out.println("FILTRANDO CARROS COM ANO MAIOR OU IGUAL 2020\n");
 		List<Carro> carros = Repository.listCarros()
 				  .stream()
-				  .filter(c -> c.getAno() >=2020)
+				  .filter(c -> c.getAno() >=2020 && c.getNome().contains("FORD") )
 				  .collect(Collectors.toList());
-		
 		
 		carros.forEach(c->System.out.println(c));
 	}
@@ -57,11 +56,13 @@ public class ExemploStream {
 		
 		Predicate<Carro> nomeContains = c -> c.getNome().contains(nome);
 		Predicate<Carro> anoGreaterThan = c -> c.getAno() > ano;
+		
+		Predicate<Carro> filtro = nomeContains.and(anoGreaterThan);
         
 		System.out.println("FILTRANDO CARROS COM ANO MAIOR OU IGUAL 2020\n");
-		List<Carro> carros = Repository.listCarros()
+		List<Carro> carros = 	Repository.listCarros()
 				  .stream()
-				  .filter(nomeContains.and(anoGreaterThan))
+				  .filter(filtro)
 				  .collect(Collectors.toList());
 		
 		
