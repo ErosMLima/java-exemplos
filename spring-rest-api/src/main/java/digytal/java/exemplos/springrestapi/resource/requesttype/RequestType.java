@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import digytal.java.exemplos.springrestapi.model.Endereco;
 import digytal.java.exemplos.springrestapi.repository.FakeRepository;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
@@ -27,7 +28,7 @@ public class RequestType {
 	
 	@ApiOperation(value = "Retorna uma lista de endereços")
 	@ApiResponses(value = {
-	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
+	        @ApiResponse(code = 200, message = "Operação realizada com sucesso",response = Endereco.class)
 	})
 	@GetMapping
 	public List<Endereco> get(){
@@ -39,7 +40,7 @@ public class RequestType {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
 	})
 	@PostMapping
-	public void post(@RequestBody Endereco endereco){
+	public void post(@RequestBody(required = true) Endereco endereco){
 		repository.save(endereco);
 	}
 	
@@ -48,7 +49,7 @@ public class RequestType {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
 	})
 	@PutMapping
-	public void put(@RequestBody Endereco endereco){
+	public void put(@RequestBody(required = true) Endereco endereco){
 		repository.update(endereco);
 	}
 	@ApiOperation(value = "Remove um endereço passando o cep na URL ex.: /enderecos/65300123")
@@ -56,7 +57,7 @@ public class RequestType {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
 	})
 	@DeleteMapping(path = "/{cep}")
-	public void delete(@PathVariable("cep") String cep){
+	public void delete(@ApiParam(value = "Número do Cep", required = true) @PathVariable("cep") String cep){
 		repository.remove(cep);
 	}
 	@ApiOperation(value = "Remove um endereço passando cep o como parametro ex.: /enderecos?cep=65300123")
@@ -64,7 +65,7 @@ public class RequestType {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
 	})
 	@DeleteMapping()
-	public void deleteParam(@RequestParam("cep") String cep){
+	public void deleteParam(@ApiParam(value = "Número do Cep", required = true) @RequestParam("cep") String cep){
 		repository.remove(cep);
 	}
 }
