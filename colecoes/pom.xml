@@ -8,6 +8,7 @@
 	<name>Digytal - Java Exemplos - Coleções</name>
 	<description>Exemplos de Uso de Coleções na Linguagem Java</description>
 	<properties>
+		<java.version>1.8</java.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
