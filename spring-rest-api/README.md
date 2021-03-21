@@ -18,3 +18,5 @@ Projeto open source para demonstrar recursos API Rest com Springboot
 - Acesse a URL `localhost:8080/swagger-ui.html`  .
 - Referências:
 stackabuse.com - https://stackabuse.com/java-rest-api-documentation-with-swagger2/#:~:text=What%20is%20Swagger%3F,documents%20for%20RESTful%20web%20services.
+
+https://www.devglan.com/spring-boot/spring-boot-file-upload-download

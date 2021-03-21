@@ -21,7 +21,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/request-type/enderecos")
+@RequestMapping("/request-type")
 public class RequestType {
 	@Autowired
 	private FakeRepository repository;
