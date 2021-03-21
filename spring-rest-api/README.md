@@ -15,6 +15,6 @@ Projeto open source para demonstrar recursos API Rest com Springboot
 |  requesttype |  Exemplo de uso dos tipos de requisição, verbos, parametros e corpo |
 |  Célula de conteúdo |  Célula de conteúdo |
 
-
+- Acesse a URL `localhost:8080/swagger-ui.html`  .
 - Referências:
 stackabuse.com - https://stackabuse.com/java-rest-api-documentation-with-swagger2/#:~:text=What%20is%20Swagger%3F,documents%20for%20RESTful%20web%20services.

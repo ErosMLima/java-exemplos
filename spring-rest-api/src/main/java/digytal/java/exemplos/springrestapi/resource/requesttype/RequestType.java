@@ -59,11 +59,11 @@ public class RequestType {
 	public void delete(@PathVariable("cep") String cep){
 		repository.remove(cep);
 	}
-	@ApiOperation(value = "Remove um endereço passando cep o como parametro ex.: /enderecos/param?cep=65300123")
+	@ApiOperation(value = "Remove um endereço passando cep o como parametro ex.: /enderecos?cep=65300123")
 	@ApiResponses(value = {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
 	})
-	@DeleteMapping(path = "/param")
+	@DeleteMapping()
 	public void deleteParam(@RequestParam("cep") String cep){
 		repository.remove(cep);
 	}

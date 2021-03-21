@@ -28,7 +28,7 @@ public class FakeRepository {
 		enderecos.put(endereco.getCep(), endereco);
 	}
 	public void update(Endereco endereco) {
-		if(enderecos.containsKey(endereco.getCep()))
+		if(!enderecos.containsKey(endereco.getCep()))
 			throw new IllegalArgumentException("Não foi localizado um endereço com este cep " + endereco.getCep());
 		
 		enderecos.put(endereco.getCep(), endereco);
