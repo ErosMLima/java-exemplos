@@ -35,6 +35,15 @@ public class RequestType {
 		return repository.findAll();
 	}
 	
+	@ApiOperation(value = "Retorna um endereço")
+	@ApiResponses(value = {
+	        @ApiResponse(code = 200, message = "Operação realizada com sucesso",response = Endereco.class)
+	})
+	@GetMapping(path = "/{cep}")
+	public Endereco get(@PathVariable("cep") String cep){
+		return repository.findByCep(cep);
+	}
+	
 	@ApiOperation(value = "Adiciona um endereço")
 	@ApiResponses(value = {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")

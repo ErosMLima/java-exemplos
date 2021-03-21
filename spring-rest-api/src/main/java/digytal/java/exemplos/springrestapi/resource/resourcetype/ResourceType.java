@@ -61,7 +61,7 @@ public class ResourceType {
     }
     
     //COM POSTMAN FUNCIONA
-    /*
+   
     @PostMapping("/multi-upload")
     public ResponseEntity multiUpload(@RequestParam("files") MultipartFile[] files) {
     	List<Object> fileDownloadUrls = new ArrayList<>();
@@ -70,8 +70,10 @@ public class ResourceType {
     			.forEach(file -> fileDownloadUrls.add(uploadToLocalFileSystem(file).getBody()));
     	return ResponseEntity.ok(fileDownloadUrls);
     }
-    */
+   
     //SWAGGER
+    
+    /*
     @RequestMapping(path = "/multi-upload", method = RequestMethod.POST,consumes = {"multipart/form-data"})
     public ResponseEntity multiUpload(@RequestBody FileBody files) {
     	List<Object> fileDownloadUrls = new ArrayList<>();
@@ -80,6 +82,8 @@ public class ResourceType {
     			.forEach(file -> fileDownloadUrls.add(uploadToLocalFileSystem(file).getBody()));
     	return ResponseEntity.ok(fileDownloadUrls);
     }
+    
+     */
     @PostMapping("/upload")
     public ResponseEntity uploadToLocalFileSystem(@RequestParam("file") MultipartFile file) {
     	String fileName = StringUtils.cleanPath(file.getOriginalFilename());
