@@ -12,7 +12,7 @@ public class FileWriterUtils {
         Files.write(path, bytes);
 	}
 	public static void write(File file,String newFile) throws IOException  {
-		write(FileUtils.bytes(file), newFile);
+		write(FileReaderUtils.bytes(file), newFile);
 	}
 	public static void write(String sourceFile,String newFile) throws IOException  {
 		write(Files.readAllBytes(Paths.get(sourceFile)), newFile);

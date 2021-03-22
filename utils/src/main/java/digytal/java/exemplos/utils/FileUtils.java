@@ -22,14 +22,7 @@ public class FileUtils {
 	public static InputStream inputStream(File file) throws FileNotFoundException {
 		return new FileInputStream(file);	
 	}
-	public static byte[] bytes(String filePath )throws IOException {
-		 byte[] bytes = Files.readAllBytes(Paths.get(filePath));
-		 return bytes;
-	}
-	public static byte[] bytes(File file )throws IOException {
-		 byte[] bytes = Files.readAllBytes(file.toPath());
-		 return bytes;
-	}
+	
 	public static Path path(String parent, String fileName) {
 		return Paths.get(parent, fileName);
 	}
