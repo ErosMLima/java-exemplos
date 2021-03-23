@@ -17,7 +17,11 @@
 	</properties>
 
 	<dependencies>
-	
+		<dependency>
+			<groupId>digytal-java-exemplos</groupId>
+			<artifactId>utils</artifactId>
+			<version>1.0</version>
+		</dependency>
 		<!-- HIBERNATE -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -29,7 +33,7 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>5.2.6.Final</version>
 		</dependency>
-		
+
 		<!-- BANCO DE DADOS DE SUA ESCOLHA -->
 		<dependency>
 			<groupId>org.hsqldb</groupId>

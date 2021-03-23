@@ -1,30 +1,16 @@
 package digytal.java.exemplos.jdbcjpa.repository.jdbc;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 import digytal.java.exemplos.jdbcjpa.model.cadastro.Produto;
 import digytal.java.exemplos.jdbcjpa.repository.Repository;
-import digytal.java.exemplos.jdbcjpa.util.StartHSQLDB;
 
-public class JdbcProdutoRepository implements Repository<Produto> {
-	private Connection connecton;
-	public JdbcProdutoRepository() {
-		try {
-			//http://www.hsqldb.org/doc/2.0/guide/running-chapt.html
-			
-			//create table tab_produto(id int, nome varchar (50), codigo_barras varchar (20),valor_venda numeric (8,2));
-			
-			connecton= DriverManager.getConnection(StartHSQLDB.JDBC_FILE_URL, "SA", "");
-		} catch (SQLException ex) {
-			ex.printStackTrace();
-		} 
-	}
+public class JdbcProdutoRepository extends JDBCConnection implements Repository<Produto> {
 	public void insert(Produto e) {
 		try {
 			PreparedStatement st = connecton.prepareStatement("INSERT INTO tab_produto(id,nome,codigo_barras,valor_venda) values(?,?,?,?)");

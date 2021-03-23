@@ -42,6 +42,12 @@ public class ExemploJdbcJpa {
 		produtoRepository.insert(produto);
 		
 		
+		Produto dbProd = produtoRepository.select(1);
+		
+		dbProd.setNome("FANTA");
+		
+		produtoRepository.update(dbProd);
+		
 		
 		//o HSQL DB PRECISA FECHAR a conexao
 		produtoRepository.fechar();
