@@ -37,7 +37,7 @@ public class JpaProdutoRepository implements Repository<Produto> {
 	}
 
 	public List<Produto> selectAll() {
-		Query query = entityManager.createQuery("SELECT e FROM Produto e");
+		Query query = entityManager.createQuery("SELECT e FROM Produto e"); //JPQL
 		return query.getResultList();
 	}
 	

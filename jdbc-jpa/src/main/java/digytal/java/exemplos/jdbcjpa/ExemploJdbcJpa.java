@@ -16,13 +16,13 @@ public class ExemploJdbcJpa {
 	public static void main(String[] args) {
 		//fakeRepository();
 		//jdbcRepository();
-		//jpaRepository();
+		jpaRepository();
 	}
 	private static void jpaRepository() {
 		JpaProdutoRepository produtoRepository = new JpaProdutoRepository();
 		
 		Produto produto = new Produto();
-		produto.setId(2);
+		//produto.setId(2);
 		produto.setCodigoBarras("89898");
 		produto.setNome("O MONGE E O EXECUTIVO");
 		produto.setValorVenda(19.35);

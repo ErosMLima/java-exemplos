@@ -2,6 +2,8 @@ package digytal.java.exemplos.jdbcjpa.model.cadastro;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,12 +11,17 @@ import javax.persistence.Table;
 @Table(name = "tab_produto")
 public class Produto {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	@Column(name = "codigo_barras")
+	
+	@Column(name = "cod_barras")
 	private String codigoBarras;
+	
 	private String nome;
+	
 	@Column(name = "valor_venda")
 	private Double valorVenda;
+	
 	public Integer getId() {
 		return id;
 	}

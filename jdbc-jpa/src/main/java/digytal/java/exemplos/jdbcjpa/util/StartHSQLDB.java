@@ -6,6 +6,7 @@ public class StartHSQLDB {
 	public static String FILE_URL = "file:/temp/db/exemplo-db";
 	public static String JDBC_FILE_URL = "jdbc:hsqldb:" + FILE_URL;
 	public static void main(String[] args) {
+		System.out.println(JDBC_FILE_URL);
 		local();
 		//server();
 	}
