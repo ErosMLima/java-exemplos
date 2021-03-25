@@ -51,14 +51,14 @@ public class SwaggerConfig {
 	
 	
 	private ApiInfoBuilder informacoesApi() {
- 
+		 
 		ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
  
-		apiInfoBuilder.title("web-api");
-		apiInfoBuilder.description("API Rest com JWT - HSQLDB - SWAGGER - PERFIS DE ACESSO");
+		apiInfoBuilder.title("Digytal - Springboot JPA - REST API");
+		apiInfoBuilder.description("API exemplo de uso de Springboot JPA e REST API");
 		apiInfoBuilder.version("1.0");
-		apiInfoBuilder.termsOfServiceUrl("Termo de uso: Uso para estudos ou comercialização.");
-		apiInfoBuilder.license("Licença - Open Source");
+		apiInfoBuilder.termsOfServiceUrl("Termo de uso: Digytal");
+		apiInfoBuilder.license("Licença - Digytal");
 		apiInfoBuilder.licenseUrl("http://www.digytal.com.br");
 		apiInfoBuilder.contact(this.contato());
  
@@ -70,6 +70,6 @@ public class SwaggerConfig {
 		return new Contact(
 				"Gleyson Sampaio",
 				"http://www.digytal.com.br", 
-				"gleyson.sampaio@digytal.com.br");
+				"gleyson@digytal.com.br");
 	}
 }
