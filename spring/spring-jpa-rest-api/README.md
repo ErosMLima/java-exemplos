@@ -37,10 +37,31 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
     
 ```
 1. Agora precisamos informar os dados de conexão no arquivo `application.properties`
-  * Habilitar o H2 Console:
+  * Habilitar o H2 Console em http://localhost:8080/h2-console:
   ``` 
   spring.h2.console.enabled=true
   spring.h2.console.path=/h2-console
+  ```
+  
+  * Testando em:
+  ``` 
+  JDBC URL: jdbc:h2:mem:testdb
+  User Name: sa
+  Pasword: <deixa vazio>
+  ``` 
+  
+  * Exibir as intruções SQL executadas pela aplicação
+  ``` 
+  spring.jpa.show-sql=true
+  ```
+  
+  * Algumas versões do Spring tem exigido adicionar estas configurações
+  ``` 
+  spring.datasource.url=jdbc:h2:mem:testdb
+  spring.datasource.driverClassName=org.h2.Driver
+  spring.datasource.username=sa
+  spring.datasource.password=
+  spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
   ```
 
 # Configuração do Swagger
@@ -54,27 +75,10 @@ A configuração do Swagger é bem simples, você só precisar criar um **@Bean*
 
 # Iniciando a aplicação
 
-1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
+1. Execute a classe `digytal.java.SpringJpaRestApiApplication`: A aplicação será iniciada.
 
 1. Digite no navegador `http://localhost:8080/swagger-ui.html`
 
 
-1. Faça o login em : `http://localhost:8080/login`
+1. Faça o l
 
-```
-{
-  "usuario": "admin",
-  "senha": "admin123"
-}
-```
-
-> Será retornado a sessão com dados de token para usar nos damais serviços.
-
-```
-{
-  "login": "admin",
-  "token": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJpYXQiOjE2MTQ1MzM5NDMsImV4cCI6MTYxNDUzNzU0M30.nG-1iR34OkLdvklLZAmPhvg-T8MnV79jwpBMGWAOPKoGc8HNrn-8SbLqrChPi_Zpn5Brbff4l1hP4oGhEFtkug",
-  "dataInicio": "2021-02-28T17:39:03.342+00:00",
-  "dataFim": "2021-02-28T18:39:03.342+00:00"
-}
-```
