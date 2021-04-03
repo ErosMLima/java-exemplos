@@ -19,12 +19,6 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 #### Configuração do Banco para usar o Spring Data Jpa
 
-1. Definindo a classe `digytal.java.model.Endereco` como Entidade JPA: 
-Uma entidade é uma classe contendo a anotação `javax.persistence.@Entity` e um atributo com a anotação `javax.persistence.@Id` que nosso caso é o próprio `cep` por não permitir valores duplicados (NOTA: No nosso exemplo, um Endereço representa um Código Postal)
-
-1. Criando o repositório `digytal.java.repository.EnderecoRepository` que é uma interface que extends de `org.springframework.data.repository.CrudRepository`:
-Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária para realizar um CRUD simples. 
-
 ##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
 ```
@@ -42,6 +36,14 @@ Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária p
 </dependency>
     
 ```
+
+##### Definindo a classe `digytal.java.model.Endereco` como Entidade JPA: 
+Uma entidade é uma classe contendo a anotação `javax.persistence.@Entity` e um atributo com a anotação `javax.persistence.@Id` que nosso caso é o próprio `cep` por não permitir valores duplicados (NOTA: No nosso exemplo, um Endereço representa um Código Postal)
+
+##### Criando o repositório `digytal.java.repository.EnderecoRepository` que é uma interface que extends de `org.springframework.data.repository.CrudRepository`:
+Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária para realizar um CRUD simples. 
+
+
 ##### Agora precisamos informar os dados de conexão no arquivo `application.properties`
   * Habilitar o H2 Console em http://localhost:8080/h2-console:
   ``` 
