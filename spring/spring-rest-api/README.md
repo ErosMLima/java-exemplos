@@ -30,6 +30,19 @@ A configuração do Swagger é bem simples, você só precisar criar um **@Bean*
 1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
 1. Digite no navegador `http://localhost:8080/swagger-ui.html`
 
-##### Sérá disponível a pagina do Swagger exibindo todos os recursos da API.
+##### Será disponível a pagina do Swagger exibindo todos os recursos da API.
 
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-api/src/main/resources/swagger.png)
+
+##### Realizando um teste de cadastro de CEP
+```
+POST: http://localhost:8080/enderecos
+{
+  "bairro": "Norte",
+  "cep": "65180000",
+  "localidade": "Humberto de Campos",
+  "logradouro": "Rua da Consolação"
+}
+```
+
+> Deverá retornar status 200
