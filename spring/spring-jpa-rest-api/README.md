@@ -2,9 +2,10 @@
 www.digytal.com.br
 (11) 95894 0362
 
-# Springboot - Web API - Exemplos de Request
+# Springboot - Web API - Exemplos de Integração com Banco de Dados
 
-Projeto Spring para demonstração do uso de Springboot e requisições Web
+Projeto Spring para demonstração do uso de Springboot, API Rest e Integração com banco de dados com Spring Data Jpa
+
 
 ## Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
@@ -12,7 +13,7 @@ Projeto Spring para demonstração do uso de Springboot e requisições Web
 ## Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
-- Repository: onde definimos o JPA para acessar os dados do BD ou Repositorio Fake
+- Repository: onde definimos o JPA para acessar os dados do BD
 - Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
 - Config: onde definimos as configurações do Swagger para documentar a API
 

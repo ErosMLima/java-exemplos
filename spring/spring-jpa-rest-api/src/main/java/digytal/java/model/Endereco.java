@@ -1,11 +1,17 @@
 package digytal.java.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
+@Entity
 @ApiModel
 public class Endereco {
 	@ApiModelProperty(notes = "Número do CEP", name = "Cep", required = true,dataType = "string", example = "65300000" )
+	@Id
 	private String cep;
 	@ApiModelProperty(notes = "Nome da Rua, Avenida", name = "Logradouro", required = true,dataType = "string", example = "Praça da Sé" )
 	private String logradouro;
