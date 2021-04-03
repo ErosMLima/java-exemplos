@@ -17,6 +17,26 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
 - Config: onde definimos as configurações do Swagger para documentar a API
 
+# Configuração do Banco para usar o Spring Data Jpa
+
+Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
+
+```
+    <!-- RECURSOS DO JPA COM SPRING -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+    
+		<!-- BANCO EM MEMORIA -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+    
+```
+
 # Configuração do Swagger
 
 A configuração do Swagger é bem simples, você só precisar criar um **@Bean** de **Docket** conforme a classe `digytal.java.config.SwaggerConfig`.
