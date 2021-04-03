@@ -39,8 +39,8 @@ public class SwaggerConfig {
 		 
 		ApiInfoBuilder apiInfoBuilder = new ApiInfoBuilder();
  
-		apiInfoBuilder.title("Digytal - Springboot JPA - REST API");
-		apiInfoBuilder.description("API exemplo de uso de Springboot JPA e REST API");
+		apiInfoBuilder.title("Digytal - Springboot - Rest API");
+		apiInfoBuilder.description("API exemplo de uso de Springboot REST API");
 		apiInfoBuilder.version("1.0");
 		apiInfoBuilder.termsOfServiceUrl("Termo de uso: Digytal");
 		apiInfoBuilder.license("Licença - Digytal");

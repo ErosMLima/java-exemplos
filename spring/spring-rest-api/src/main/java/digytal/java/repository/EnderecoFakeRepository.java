@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import digytal.java.model.Endereco;
 @Component
-public class FakeRepository {
+public class EnderecoFakeRepository {
 	private Map<String, Endereco> enderecos = new HashMap<String, Endereco>();
 	{
 		enderecos.put("64180000", new Endereco("64180-000", "", "", "Esperantina"));

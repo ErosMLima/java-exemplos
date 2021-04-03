@@ -1,4 +1,4 @@
-package digytal.java.resource.requesttype;
+package digytal.java.resource;
 
 import java.util.List;
 
@@ -14,17 +14,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import digytal.java.model.Endereco;
-import digytal.java.repository.FakeRepository;
+import digytal.java.repository.EnderecoFakeRepository;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
-@RequestMapping("/request-type")
-public class RequestType {
+@RequestMapping("/enderecos")
+public class EnderecoResource {
 	@Autowired
-	private FakeRepository repository;
+	private EnderecoFakeRepository repository;
 	
 	@ApiOperation(value = "Retorna uma lista de endereços")
 	@ApiResponses(value = {
@@ -61,6 +61,7 @@ public class RequestType {
 	public void put(@RequestBody(required = true) Endereco endereco){
 		repository.update(endereco);
 	}
+	
 	@ApiOperation(value = "Remove um endereço passando o cep na URL ex.: /enderecos/65300123")
 	@ApiResponses(value = {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
@@ -69,6 +70,7 @@ public class RequestType {
 	public void delete(@ApiParam(value = "Número do Cep", required = true) @PathVariable("cep") String cep){
 		repository.remove(cep);
 	}
+	
 	@ApiOperation(value = "Remove um endereço passando cep o como parametro ex.: /enderecos?cep=65300123")
 	@ApiResponses(value = {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso")
