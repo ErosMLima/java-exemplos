@@ -37,8 +37,11 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
     
 ```
 1. Agora precisamos informar os dados de conexão no arquivo `application.properties`
-NOTA: Esta configuração é opcional, vamos utiliza-la para 
-
+  * Habilitar o H2 Console:
+  ``` 
+  spring.h2.console.enabled=true
+  spring.h2.console.path=/h2-console
+  ```
 
 # Configuração do Swagger
 
