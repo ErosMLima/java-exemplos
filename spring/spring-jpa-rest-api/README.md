@@ -19,7 +19,13 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 #### Configuração do Banco para usar o Spring Data Jpa
 
-1. Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
+1. Definindo a classe Endereco como Entidade JPA
+Uma entidade é uma classe contendo a anotação `javax.persistence.@Entity` e um atributo com a anotação `javax.persistence.@Id` que nosso caso é o próprio `cep` por não permitir valores duplicados (NOTA: No nosso exemplo, um Endereço representa um Código Postal)
+
+1. Criando o repositório `digytal.java.repository.EnderecoRepository` que é uma interface que extends de `org.springframework.data.repository.CrudRepository`
+Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária para realizar um CRUD simples. 
+
+##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
 ```
 <!-- RECURSOS DO JPA COM SPRING -->
@@ -36,26 +42,13 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 </dependency>
     
 ```
-1. Agora precisamos informar os dados de conexão no arquivo `application.properties`
+##### Agora precisamos informar os dados de conexão no arquivo `application.properties`
   * Habilitar o H2 Console em http://localhost:8080/h2-console:
   ``` 
   spring.h2.console.enabled=true
   spring.h2.console.path=/h2-console
   ```
-  
-  * Testando em:
-  ``` 
-  JDBC URL: jdbc:h2:mem:testdb
-  User Name: sa
-  Pasword: <deixa vazio>
-  ``` 
-  
-  * Exibir as intruções SQL executadas pela aplicação
-  ``` 
-  spring.jpa.show-sql=true
-  ```
-  
-  * Algumas versões do Spring tem exigido adicionar estas configurações no `application.properties`
+   * Algumas versões do Spring tem exigido adicionar estas configurações no `application.properties`
   ``` 
   spring.datasource.url=jdbc:h2:mem:testdb
   spring.datasource.driverClassName=org.h2.Driver
@@ -63,7 +56,19 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
   spring.datasource.password=
   spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
   ```
-
+   
+  * Exibir as intruções SQL executadas pela aplicação
+  ``` 
+  spring.jpa.show-sql=true
+  ```
+  
+  * Testando em http://localhost:8080/h2-console:
+  ``` 
+  JDBC URL: jdbc:h2:mem:testdb
+  User Name: sa
+  Pasword: <deixa vazio>
+  ``` 
+ 
 #### Configuração do Swagger
 
 A configuração do Swagger é bem simples, você só precisar criar um **@Bean** de **Docket** conforme a classe `digytal.java.config.SwaggerConfig`.
