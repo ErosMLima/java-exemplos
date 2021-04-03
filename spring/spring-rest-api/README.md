@@ -6,7 +6,7 @@ www.digytal.com.br
 
 Projeto Spring para demonstração do uso de Springboot e requisições Web
 
-### Colaboradores
+#### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
 #### Estrutura do Projeto
