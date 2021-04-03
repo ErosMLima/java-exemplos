@@ -19,23 +19,26 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 # Configuração do Banco para usar o Spring Data Jpa
 
-Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
+1. Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
 ```
-    <!-- RECURSOS DO JPA COM SPRING -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-    
-		<!-- BANCO EM MEMORIA -->
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+<!-- RECURSOS DO JPA COM SPRING -->
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
+
+<!-- BANCO EM MEMORIA -->
+<dependency>
+	<groupId>com.h2database</groupId>
+	<artifactId>h2</artifactId>
+	<scope>runtime</scope>
+</dependency>
     
 ```
+1. Agora precisamos informar os dados de conexão no arquivo `application.properties`
+NOTA: Esta configuração é opcional, vamos utiliza-la para 
+
 
 # Configuração do Swagger
 
