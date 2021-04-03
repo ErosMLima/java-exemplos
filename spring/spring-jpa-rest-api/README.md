@@ -2,22 +2,22 @@
 www.digytal.com.br
 (11) 95894 0362
 
-# Springboot - Web API - Exemplos de Integração com Banco de Dados
+## Springboot - Web API - Exemplos de Integração com Banco de Dados
 
 Projeto Spring para demonstração do uso de Springboot, API Rest e Integração com banco de dados com Spring Data Jpa
 
 
-## Colaboradores
+#### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
-## Estrutura do Projeto
+#### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
 - Repository: onde definimos o JPA para acessar os dados do BD
 - Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
 - Config: onde definimos as configurações do Swagger para documentar a API
 
-# Configuração do Banco para usar o Spring Data Jpa
+#### Configuração do Banco para usar o Spring Data Jpa
 
 1. Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
@@ -55,7 +55,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
   spring.jpa.show-sql=true
   ```
   
-  * Algumas versões do Spring tem exigido adicionar estas configurações
+  * Algumas versões do Spring tem exigido adicionar estas configurações no `application.properties`
   ``` 
   spring.datasource.url=jdbc:h2:mem:testdb
   spring.datasource.driverClassName=org.h2.Driver
@@ -64,7 +64,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
   spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
   ```
 
-# Configuração do Swagger
+#### Configuração do Swagger
 
 A configuração do Swagger é bem simples, você só precisar criar um **@Bean** de **Docket** conforme a classe `digytal.java.config.SwaggerConfig`.
 
@@ -73,12 +73,25 @@ A configuração do Swagger é bem simples, você só precisar criar um **@Bean*
 > NOTA 2: Avalie as anotações do Swagger existentes nas classes digytal.java.model.Endereco e digytal.java.resource.EnderecoResource, estas anotações ajudam a documentar a API com o Swagger
 
 
-# Iniciando a aplicação
+#### Iniciando a aplicação
 
-1. Execute a classe `digytal.java.SpringJpaRestApiApplication`: A aplicação será iniciada.
-
+1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
 1. Digite no navegador `http://localhost:8080/swagger-ui.html`
 
+##### Será disponível a pagina do Swagger exibindo todos os recursos da API.
 
-1. Faça o l
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-api/src/main/resources/swagger.png)
+
+##### Realizando um teste de cadastro de CEP
+```
+POST: http://localhost:8080/enderecos
+{
+  "bairro": "Norte",
+  "cep": "65180000",
+  "localidade": "Humberto de Campos",
+  "logradouro": "Rua da Consolação"
+}
+```
+
+> Deverá retornar status 200
 
