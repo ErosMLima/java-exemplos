@@ -1,4 +1,4 @@
-package digytal.java.exemplos.springrestapi.model;
+package digytal.java.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

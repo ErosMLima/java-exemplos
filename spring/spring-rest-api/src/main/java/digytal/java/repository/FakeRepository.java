@@ -1,4 +1,4 @@
-package digytal.java.exemplos.springrestapi.repository;
+package digytal.java.repository;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import digytal.java.exemplos.springrestapi.model.Endereco;
+import digytal.java.model.Endereco;
 @Component
 public class FakeRepository {
 	private Map<String, Endereco> enderecos = new HashMap<String, Endereco>();

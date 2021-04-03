@@ -1,4 +1,4 @@
-package digytal.java.exemplos.springrestapi.resource.resourcetype;
+package digytal.java.resource.resourcetype;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import digytal.java.exemplos.springrestapi.model.FileBody;
+import digytal.java.model.FileBody;
 
 @RestController
 @RequestMapping("/resource-type")

@@ -1,4 +1,4 @@
-package digytal.java.exemplos.springrestapi.resource.requesttype;
+package digytal.java.resource.requesttype;
 
 import java.util.List;
 
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import digytal.java.exemplos.springrestapi.model.Endereco;
-import digytal.java.exemplos.springrestapi.repository.FakeRepository;
+import digytal.java.model.Endereco;
+import digytal.java.repository.FakeRepository;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
