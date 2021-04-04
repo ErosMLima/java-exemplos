@@ -31,8 +31,6 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 ##### Para não criar este conversor toda vez, vamos criar um Bean no Spring.
 Veja a classe: `digytal.java.config.Beans`
 
-
-
 #### Configuração do Banco para usar o Spring Data Jpa
 
 ##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
@@ -59,6 +57,9 @@ Uma entidade é uma classe contendo a anotação `javax.persistence.@Entity` e u
 ##### Criando o repositório `digytal.java.repository.EnderecoRepository` que é uma interface que extends de `org.springframework.data.repository.CrudRepository`:
 Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária para realizar um CRUD simples. 
 
+##### Criando o service `digytal.java.service.EnderecoService` que é a classe que contém toda regra de negócio, validação e conversão que será utilizada no nosso `digytal.java.resource.EnderecoResource`
+
+IMAGEM
 
 ##### Agora precisamos informar os dados de conexão no arquivo `application.properties`
   * Habilitar o H2 Console em http://localhost:8080/h2-console:
