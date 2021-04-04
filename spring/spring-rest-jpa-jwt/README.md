@@ -2,9 +2,9 @@
 www.digytal.com.br
 (11) 95894 0362
 
-## Springboot - Exemplo de Uso de Spring Boot API para converter Entity para Dto
+## Springboot - Exemplo de Uso de Spring Boot, Spring Security e JWT
 
-Projeto Spring para demonstração do uso de Springboot, ModelMapper, API Rest e Integração com banco de dados com Spring Data Jpa
+Projeto Spring para demonstração do uso de Springboot, API Rest, Spring Security com JWT e Integração com banco de dados com Spring Data Jpa
 
 
 #### Colaboradores
