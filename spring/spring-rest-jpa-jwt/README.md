@@ -50,6 +50,7 @@ Veja a classe: `digytal.java.config.Beans`
 - Criamos a classe `digytal.java.security.WebSecurityConfig` que contém toda a configuração de segurança necessária.
 - Criamos a classe `digytal.java.security.JWTConstants` que contém parametros de segurança como: {KEY:Chave de Criptografia, PREFIX:Prefixo Token, TOKEN_EXPIRATION:Tempo expiração do Token}. 
 - Criamos a classe `digytal.java.security.JWTAuthorizationFilter` que é responsável para analisar o token recebido e aplicar as regras de validação implementada.
+- Criamos a classe `digytal.java.security.JWTUtils` que nos auxiliará a criar token e depois obter os dados do token nas requisições
 
 ##### Considerações:
 1. Na classe `digytal.java.security.WebSecurityConfig` utilizamos as anotações abaixo para determinar ao Spring que as configurações de segurança serão de forma manual:
@@ -78,6 +79,9 @@ private static final String[] SWAGGER_WHITELIST = {
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}
 ```
+1. Agora vamos as regras aplicadas em nosso filtro de requisições na classe `digytal.java.security.JWTAuthorizationFilter`:  **NOTA: Este é um exemplo de validação de token simples**.
+
+
 
 ##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
