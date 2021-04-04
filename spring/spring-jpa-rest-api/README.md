@@ -115,6 +115,7 @@ POST: http://localhost:8080/enderecos
 
 3. Digite no navegador `http://localhost:8080/h2-console/`
 
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-api/src/main/resources/swagger.png)
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-jpa-rest-api/src/main/resources/h2.png)
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-jpa-rest-api/src/main/resources/h2-console.png)
 
 
