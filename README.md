@@ -11,4 +11,4 @@ Projeto open source para demonstrar recursos e exemplos utilizando a linguagem J
 |----------------|-------------------------------
 |colecoes|Projeto com a finalidade de apresentar os recursos de uso de coleções
 |jdbc-jpa|Projeto com a finalidade de apresentar exemplos de uso de JDBC e JPA
-|spring framework|Exemplos de projetos desenvolvidos com Spring Framework
+|spring|Exemplos de projetos desenvolvidos com Spring Framework
