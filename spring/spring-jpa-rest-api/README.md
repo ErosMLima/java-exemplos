@@ -83,7 +83,18 @@ A configuração do Swagger é bem simples, você só precisar criar um **@Bean*
 #### Iniciando a aplicação
 
 1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
-1. Digite no navegador `http://localhost:8080/swagger-ui.html`
+   * Esta classe contém um Bean que realizar uma instrução de exemplo de inclusão de Endereço.
+   ```
+	@Bean
+	public CommandLineRunner run(EnderecoRepository repository) throws Exception {
+		return args -> {
+			Endereco end = new Endereco("01001000", "Praça da Sé", "Sé", "São Paulo");
+			repository.save(end);
+		};
+	}
+   ```
+   
+3. Digite no navegador `http://localhost:8080/swagger-ui.html`
 
 ##### Será disponível a pagina do Swagger exibindo todos os recursos da API.
 
@@ -101,4 +112,9 @@ POST: http://localhost:8080/enderecos
 ```
 
 > Deverá retornar status 200
+
+3. Digite no navegador `http://localhost:8080/h2-console/`
+
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-api/src/main/resources/swagger.png)
+
 
