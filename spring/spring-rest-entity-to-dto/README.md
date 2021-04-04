@@ -20,7 +20,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 #### Como habilitar conversão entre Entity to Dto
 
-##### Precisamos adicionar a dependência do ModelMaprer, um framework que realiza conversão de objetos.
+##### Precisamos adicionar a dependência do ModelMapper, um framework que realiza conversão de objetos.
 ```
 <dependency>
     <groupId>org.modelmapper</groupId>
@@ -29,6 +29,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 </dependency>
 ```
 ##### Para não criar este conversor toda vez, vamos criar um Bean no Spring.
+
 Veja a classe: `digytal.java.config.Beans`
 
 #### Configuração do Banco para usar o Spring Data Jpa
@@ -52,10 +53,12 @@ Veja a classe: `digytal.java.config.Beans`
 ```
 
 ##### Definindo a classe `digytal.java.dto.EnderecoDto` como Data Transfer Object: 
-##### Definindo a classe `digytal.java.model.Endereco` como Entidade JPA: 
+##### Definindo a classe `digytal.java.model.Endereco` como Entidade JPA:
+
 Uma entidade é uma classe contendo a anotação `javax.persistence.@Entity` e um atributo com a anotação `javax.persistence.@Id` que nosso caso é o próprio `cep` por não permitir valores duplicados (NOTA: No nosso exemplo, um Endereço representa um Código Postal)
 
 ##### Criando o repositório `digytal.java.repository.EnderecoRepository` que é uma interface que extends de `org.springframework.data.repository.CrudRepository`:
+
 Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária para realizar um CRUD simples. 
 
 ##### Criando o service `digytal.java.service.EnderecoService` que é a classe que contém toda regra de negócio, validação e conversão que será utilizada no nosso `digytal.java.resource.EnderecoResource`
@@ -95,7 +98,7 @@ A configuração do Swagger é bem simples, você só precisar criar um **@Bean*
 
 > NOTA 1: Mude o nome do pacote onde estão localizados os resources conforme linha 27.
 
-> NOTA 2: Avalie as anotações do Swagger existentes nas classes digytal.java.model.Endereco e digytal.java.resource.EnderecoResource, estas anotações ajudam a documentar a API com o Swagger
+> NOTA 2: Avalie as anotações do Swagger existentes nas classes digytal.java.dto.EnderecoDto e digytal.java.resource.EnderecoResource, estas anotações ajudam a documentar a API com o Swagger
 
 
 #### Iniciando a aplicação
