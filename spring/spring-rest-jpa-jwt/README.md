@@ -49,7 +49,7 @@ Veja a classe: `digytal.java.config.Beans`
 
 1. Criamos a classe `digytal.java.security.WebSecurityConfig` que contém toda a configuração de segurança necessária.
 1. Criamos a classe `digytal.java.security.JWTConstants` que contém parametros de segurança como: {KEY:Chave de Criptografia, PREFIX:Prefixo Token, TOKEN_EXPIRATION:Tempo expiração do Token}. 
-
+1. Criamos a classe `digytal.java.security.JWTAuthorizationFilter` que é responsável para analisar o token recebido e aplicar as regras de validação implementada.
 
 
 
