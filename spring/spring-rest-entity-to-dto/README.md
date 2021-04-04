@@ -14,8 +14,24 @@ Projeto Spring para demonstração do uso de Springboot, API Rest e Integração
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
 - Repository: onde definimos o JPA para acessar os dados do BD
+- Service: camada que contém regras de negócio e lógica de conversão e validação de persistência
 - Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
-- Config: onde definimos as configurações do Swagger para documentar a API
+- Config: onde definimos as configurações do Swagger para documentar a API e nosso @Bean ModelMapper para converter Entity to Dto
+
+#### Como habilitar conversão entre Entity to Dto
+
+##### Precisamos adicionar a dependência do ModelMaprer, um framework que realiza conversão de objetos.
+```
+<dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper</artifactId>
+    <version>2.3.5</version>
+</dependency>
+```
+##### Para não criar este conversor toda vez, vamos criar um Bean no Spring.
+Veja a classe: `digytal.java.config.Beans`
+
+
 
 #### Configuração do Banco para usar o Spring Data Jpa
 
