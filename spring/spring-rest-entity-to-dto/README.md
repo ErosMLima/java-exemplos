@@ -14,8 +14,22 @@ Projeto Spring para demonstração do uso de Springboot, API Rest e Integração
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
 - Repository: onde definimos o JPA para acessar os dados do BD
+- Service: camada que contém regras de negócio e lógica de conversão e validação de persistência
 - Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
-- Config: onde definimos as configurações do Swagger para documentar a API
+- Config: onde definimos as configurações do Swagger para documentar a API e nosso @Bean ModelMapper para converter Entity to Dto
+
+#### Como habilitar conversão entre Entity to Dto
+
+##### Precisamos adicionar a dependência do ModelMaprer, um framework que realiza conversão de objetos.
+```
+<dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper</artifactId>
+    <version>2.3.5</version>
+</dependency>
+```
+##### Para não criar este conversor toda vez, vamos criar um Bean no Spring.
+Veja a classe: `digytal.java.config.Beans`
 
 #### Configuração do Banco para usar o Spring Data Jpa
 
@@ -43,6 +57,9 @@ Uma entidade é uma classe contendo a anotação `javax.persistence.@Entity` e u
 ##### Criando o repositório `digytal.java.repository.EnderecoRepository` que é uma interface que extends de `org.springframework.data.repository.CrudRepository`:
 Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária para realizar um CRUD simples. 
 
+##### Criando o service `digytal.java.service.EnderecoService` que é a classe que contém toda regra de negócio, validação e conversão que será utilizada no nosso `digytal.java.resource.EnderecoResource`
+
+IMAGEM
 
 ##### Agora precisamos informar os dados de conexão no arquivo `application.properties`
   * Habilitar o H2 Console em http://localhost:8080/h2-console:
