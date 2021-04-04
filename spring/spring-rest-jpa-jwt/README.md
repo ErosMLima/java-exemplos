@@ -49,9 +49,8 @@ Veja a classe: `digytal.java.config.Beans`
 #### Configurando o Spring Security com JWT
 
 - Criamos a classe `digytal.java.security.WebSecurityConfig` que contém toda a configuração de segurança necessária.
-- Criamos a classe `digytal.java.security.JWTConstants` que contém parametros de segurança como: {KEY:Chave de Criptografia, PREFIX:Prefixo Token, TOKEN_EXPIRATION:Tempo expiração do Token}. 
 - Criamos a classe `digytal.java.security.JWTAuthorizationFilter` que é responsável para analisar o token recebido e aplicar as regras de validação implementada.
-- Criamos a classe `digytal.java.security.JWTUtils` que nos auxiliará a criar token e depois obter os dados do token nas requisições
+- Criamos a classe `digytal.java.security.JWTUtils` que nos auxiliará a criar token e depois obter os dados do token nas requisições com os parametros de segurança como: {KEY:Chave de Criptografia, PREFIX:Prefixo Token, TOKEN_EXPIRATION:Tempo expiração do Token}. 
 - Criamos a classe `digytal.java.security.JWTObject` esta classe representa um Objeto representando pelo JWT em sua criação. **O JWT encripta um objeto qualquer com uma convenção de subject, authorities, createDate, expirationDate**
 
 ##### Considerações:
