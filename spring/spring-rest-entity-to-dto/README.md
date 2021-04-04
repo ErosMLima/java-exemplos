@@ -140,3 +140,7 @@ POST: http://localhost:8080/enderecos
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/select.png)
 
 
+#### Veja também
+
+###### [Criando uma Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-api)
+###### [Criando uma JPA Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-jpa-rest-api)
