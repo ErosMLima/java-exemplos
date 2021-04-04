@@ -116,21 +116,20 @@ private static final String[] SWAGGER_WHITELIST = {
 
 ##### Será disponível a pagina do Swagger exibindo todos os recursos da API e POST para adicionar Endereço e Realizar Login.
 
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/swagger-dto.png)
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/login-logar.png)
 
 ##### Realizando um teste de cadastro de CEP
 ```
-POST: http://localhost:8080/enderecos
+POST: http://localhost:8080/login
 {
-  "bairro": "Norte",
-  "cep": "65180000",
-  "localidade": "Humberto de Campos",
-  "logradouro": "Rua da Consolação"
+  "password": "gso",
+  "username": "gso"
 }
 ```
 
-> Deverá retornar status 200
+> Deverá retornar status 200 com o token conforme imagem abaixo:
 
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/login-token.png)
 
 
 
