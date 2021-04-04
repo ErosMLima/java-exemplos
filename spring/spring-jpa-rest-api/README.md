@@ -10,6 +10,9 @@ Projeto Spring para demonstração do uso de Springboot, API Rest e Integração
 #### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
+#### Requisitos
+###### [Criando uma Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-api)
+
 #### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
