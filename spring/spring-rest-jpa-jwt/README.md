@@ -80,77 +80,15 @@ private static final String[] SWAGGER_WHITELIST = {
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 	}
 ```
-1. Agora vamos as regras aplicadas em nosso filtro de requisições na classe `digytal.java.security.JWTAuthorizationFilter`:  **NOTA: Este é um exemplo de validação de token simples**.
+- Agora vamos as regras aplicadas em nosso filtro de requisições na classe `digytal.java.security.JWTAuthorizationFilter`:  **NOTA: Este é um exemplo de validação de token simples**.
 
-1. A classe `digytal.java.security.JWTAuthorizationFilter` tem forte dependência a classe `digytal.java.security.JWTUtils` que é o CORE da nossa implementação JWT
+- A classe `digytal.java.security.JWTAuthorizationFilter` tem forte dependência a classe `digytal.java.security.JWTUtils` que é o CORE da nossa implementação JWT
+
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/jwt-core-utils.png)
+
+- Com a segurança devidamente configurada, vamos criar nosso token com base em um usuário do banco de dados.
 
 
-
-##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
-
-```
-<!-- RECURSOS DO JPA COM SPRING -->
-<dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-data-jpa</artifactId>
-</dependency>
-
-<!-- BANCO EM MEMORIA -->
-<dependency>
-	<groupId>com.h2database</groupId>
-	<artifactId>h2</artifactId>
-	<scope>runtime</scope>
-</dependency>
-    
-```
-
-##### Definindo a classe `digytal.java.dto.EnderecoDto` como Data Transfer Object: 
-##### Definindo a classe `digytal.java.model.Endereco` como Entidade JPA:
-
-Uma entidade é uma classe contendo a anotação `javax.persistence.@Entity` e um atributo com a anotação `javax.persistence.@Id` que nosso caso é o próprio `cep` por não permitir valores duplicados (NOTA: No nosso exemplo, um Endereço representa um Código Postal)
-
-##### Criando o repositório `digytal.java.repository.EnderecoRepository` que é uma interface que extends de `org.springframework.data.repository.CrudRepository`:
-
-Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária para realizar um CRUD simples. 
-
-##### Criando o service `digytal.java.service.EnderecoService` que é a classe que contém toda regra de negócio, validação e conversão que será utilizada no nosso `digytal.java.resource.EnderecoResource`
-
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/converter-service.png)
-
-##### Agora precisamos informar os dados de conexão no arquivo `application.properties`
-  * Habilitar o H2 Console em http://localhost:8080/h2-console:
-  ``` 
-  spring.h2.console.enabled=true
-  spring.h2.console.path=/h2-console
-  ```
-   * Algumas versões do Spring tem exigido adicionar estas configurações no `application.properties`
-  ``` 
-  spring.datasource.url=jdbc:h2:mem:testdb
-  spring.datasource.driverClassName=org.h2.Driver
-  spring.datasource.username=sa
-  spring.datasource.password=
-  spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-  ```
-   
-  * Exibir as intruções SQL executadas pela aplicação
-  ``` 
-  spring.jpa.show-sql=true
-  ```
-  
-  * Testando em http://localhost:8080/h2-console:
-  ``` 
-  JDBC URL: jdbc:h2:mem:testdb
-  User Name: sa
-  Pasword: <deixa vazio>
-  ``` 
- 
-#### Configuração do Swagger
-
-A configuração do Swagger é bem simples, você só precisar criar um **@Bean** de **Docket** conforme a classe `digytal.java.config.SwaggerConfig`.
-
-> NOTA 1: Mude o nome do pacote onde estão localizados os resources conforme linha 27.
-
-> NOTA 2: Avalie as anotações do Swagger existentes nas classes digytal.java.dto.EnderecoDto e digytal.java.resource.EnderecoResource, estas anotações ajudam a documentar a API com o Swagger
 
 
 #### Iniciando a aplicação
