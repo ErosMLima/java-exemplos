@@ -9,6 +9,6 @@ Projeto open source para demonstrar recursos e exemplos utilizando a linguagem J
 
 |Projeto         |Descrição                      
 |----------------|-------------------------------
-|colecoes|Projeto com a finalidade de apresentar os recursos de uso de coleções
-|jdbc-jpa|Projeto com a finalidade de apresentar exemplos de uso de JDBC e JPA
-|spring|Exemplos de projetos desenvolvidos com Spring Framework
+|[colecoes](https://github.com/glysns/java-exemplos/tree/main/colecoes)|Projeto com a finalidade de apresentar os recursos de uso de coleções
+|[jdbc-jpa](https://github.com/glysns/java-exemplos/tree/main/jdbc-jpa)|Projeto com a finalidade de apresentar exemplos de uso de JDBC e JPA
+|[spring-framework](https://github.com/glysns/java-exemplos/tree/main/spring)|Exemplos de projetos desenvolvidos com Spring Framework
