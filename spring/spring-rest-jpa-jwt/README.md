@@ -63,7 +63,21 @@ private static final String[] SWAGGER_WHITELIST = {
 			"/configuration/ui", "/configuration/security", "/swagger-ui.html", "/webjars/**" 
 			};
 ```
-
+1. Ainda na classe `digytal.java.security.WebSecurityConfig` vamos sobrescrever o método configurep para determinar as rotas que não precisão passar por autenticação, nosso caso só o path do Swagger e login estarão disponível.
+```
+@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		
+		http.cors().and().csrf().disable()
+		.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
+		.authorizeRequests()
+		.antMatchers(SWAGGER_WHITELIST).permitAll()
+		.antMatchers("/login").permitAll()
+		.anyRequest().authenticated()
+		.and()
+        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+	}
+```
 
 ##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
