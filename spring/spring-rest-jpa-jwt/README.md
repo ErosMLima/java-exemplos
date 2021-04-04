@@ -13,6 +13,7 @@ Projeto Spring para demonstração do uso de Springboot, ModelMapper, API Rest e
 #### Requisitos
 ###### [Criando uma Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-api)
 ###### [Criando uma JPA Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-jpa-rest-api)
+###### [Criando uma Rest API e Conversor Entity to Dto com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-entity-to-dto)
 
 
 #### Estrutura do Projeto
@@ -21,7 +22,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Repository: onde definimos o JPA para acessar os dados do BD
 - Service: camada que contém regras de negócio e lógica de conversão e validação de persistência
 - Resource: também chamado de Controller foi onde definimos a exposição dos recursos via API por meio da definição dos endpoints
-- Config: onde definimos as configurações do Swagger para documentar a API e nosso @Bean ModelMapper para converter Entity to Dto
+- Config: onde definimos as configurações do Swagger para documentar a API, nosso @Bean ModelMapper para converter Entity to Dto e agora o PasswordEncoder para criptografar a senhas.
 
 #### Como habilitar conversão entre Entity to Dto
 
