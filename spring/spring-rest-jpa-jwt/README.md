@@ -65,7 +65,7 @@ private static final String[] SWAGGER_WHITELIST = {
 			"/configuration/ui", "/configuration/security", "/swagger-ui.html", "/webjars/**" 
 			};
 ```
-1. Ainda na classe `digytal.java.security.WebSecurityConfig` vamos sobrescrever o método configurep para determinar as rotas que não precisão passar por autenticação, nosso caso só o path do Swagger e login estarão disponível.
+1. Ainda na classe `digytal.java.security.WebSecurityConfig` vamos sobrescrever o método configure para determinar as rotas que não precisão passar por autenticação, nosso caso só o path do Swagger e login estarão disponível.
 ```
 @Override
 	protected void configure(HttpSecurity http) throws Exception {
@@ -87,7 +87,7 @@ private static final String[] SWAGGER_WHITELIST = {
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/jwt-core-utils.png)
 
 - Com a segurança devidamente configurada, vamos criar nosso token com base em um usuário do banco de dados.
-- Surgirá novas classes que representarão o usuário e as ações de interação com o banco de dados, são elas.
+- Surgirão novas classes que representarão o usuário e as ações de interação com o banco de dados, são elas.
   1. digytal.java.model.Login
   1. digytal.java.repository.LoginRepository
   1. digytal.java.service.LoginService
