@@ -120,4 +120,4 @@ POST: http://localhost:8080/enderecos
 
 ##### Veja também
 
-![Criando uma Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-api)
+- [Criando uma Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-api)
