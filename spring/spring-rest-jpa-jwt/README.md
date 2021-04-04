@@ -118,7 +118,7 @@ private static final String[] SWAGGER_WHITELIST = {
 
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/login-logar.png)
 
-##### Realizando um teste de cadastro de CEP
+##### Realizando um teste de cadastro de Login
 ```
 POST: http://localhost:8080/login
 {
@@ -131,5 +131,16 @@ POST: http://localhost:8080/login
 
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/login-token.png)
 
+##### Realizando um teste de cadastro de CEP com Token
+```
+POST: http://localhost:8080/enderecos
+{
+  "bairro": "Norte",
+  "cep": "65180000",
+  "localidade": "Humberto de Campos",
+  "logradouro": "Rua da Consolação"
+}
+```
 
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/token-endereco-post.png)
 
