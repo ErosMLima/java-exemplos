@@ -95,12 +95,12 @@ private static final String[] SWAGGER_WHITELIST = {
   1. digytal.java.dto.Sessao
 - Modificamos a classe `digytal.java.config.SwaggerConfig` para começar a permitir um parametro `Authorization`
 - Implementamos a verificação dos dados Login na requisição com base nas informações que estão no banco de dados.
-	
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/login-service.png)
 
 
 #### Iniciando a aplicação
 
-1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
+1. Execute a classe `digytal.java.SpringRestJwtApiApplication`: A aplicação será iniciada.
    * Esta classe contém um Bean que realizar uma instrução de exemplo de inclusão de Endereço.
    ```
 	@Bean
@@ -114,7 +114,7 @@ private static final String[] SWAGGER_WHITELIST = {
    
 3. Digite no navegador `http://localhost:8080/swagger-ui.html`
 
-##### Será disponível a pagina do Swagger exibindo todos os recursos da API e POST para adicionar Endereço via Dto.
+##### Será disponível a pagina do Swagger exibindo todos os recursos da API e POST para adicionar Endereço e Realizar Login.
 
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/swagger-dto.png)
 
