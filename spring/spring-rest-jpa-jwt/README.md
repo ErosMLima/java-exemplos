@@ -82,6 +82,8 @@ private static final String[] SWAGGER_WHITELIST = {
 ```
 1. Agora vamos as regras aplicadas em nosso filtro de requisições na classe `digytal.java.security.JWTAuthorizationFilter`:  **NOTA: Este é um exemplo de validação de token simples**.
 
+1. A classe `digytal.java.security.JWTAuthorizationFilter` tem forte dependência a classe `digytal.java.security.JWTUtils` que é o CORE da nossa implementação JWT
+
 
 
 ##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
