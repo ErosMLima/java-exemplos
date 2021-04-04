@@ -18,14 +18,20 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 		
+		//obtem o token da request com AUTHORIZATION
+		String token =  request.getHeader(JWTUtils.HEADER_AUTHORIZATION);
 		
-		JWTObject object = JWTUtils.object(request.getHeader(JWTUtils.HEADER));
-		
-		UsernamePasswordAuthenticationToken userToken = new UsernamePasswordAuthenticationToken(object.getSubject(), null, new ArrayList<>());
-
-        SecurityContextHolder.getContext().setAuthentication(userToken);
-        filterChain.doFilter(request, response);
-		
+		if(token!=null && !token.isEmpty()) {
+			JWTObject object = JWTUtils.object(token);
+			
+			UsernamePasswordAuthenticationToken userToken = new UsernamePasswordAuthenticationToken(object.getSubject(), null, new ArrayList<>());
+	
+	        SecurityContextHolder.getContext().setAuthentication(userToken);
+	       
+		}else {
+			SecurityContextHolder.clearContext();
+		}
+		filterChain.doFilter(request, response);
 	}
 
 }

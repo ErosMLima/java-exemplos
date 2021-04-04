@@ -14,7 +14,7 @@ public class JWTUtils {
 	public static final String KEY = "SECRET_KEY";
 	public static final String PREFIX = "Bearer";
 	public static final long TOKEN_EXPIRATION =  1 * 60 * 60 * 1000; //1 hora
-	public static final String HEADER = "Authorization";
+	public static final String HEADER_AUTHORIZATION = "Authorization";
 	
 	public static String create(String subject, Date issuedAt, Date expriration) {
 		
