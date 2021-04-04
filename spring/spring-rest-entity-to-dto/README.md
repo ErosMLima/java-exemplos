@@ -15,7 +15,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
 - Repository: onde definimos o JPA para acessar os dados do BD
 - Service: camada que contém regras de negócio e lógica de conversão e validação de persistência
-- Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
+- Resource: também chamado de Controller foi onde definimos a exposição dos recursos via API por meio da definição dos endpoints
 - Config: onde definimos as configurações do Swagger para documentar a API e nosso @Bean ModelMapper para converter Entity to Dto
 
 #### Como habilitar conversão entre Entity to Dto
