@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel
 public class EnderecoDto {
-	@ApiModelProperty(notes = "Número do CEP", name = "Cep", required = true,dataType = "string", example = "65300000" )
+	@ApiModelProperty(notes = "Número do CEP", name = "Cep", required = true,dataType = "string", example = "01001000" )
 	private String cep;
 	@ApiModelProperty(notes = "Nome da Rua, Avenida", name = "Logradouro", required = true,dataType = "string", example = "Praça da Sé" )
 	private String logradouro;

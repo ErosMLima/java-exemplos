@@ -37,6 +37,12 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<!-- CONVERTE ENTITY TO DTO -->
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>2.3.5</version>
+		</dependency>
 		<!-- SWAGGER DOCUMENTACAO -->
 		<dependency>
 			<groupId>io.springfox</groupId>

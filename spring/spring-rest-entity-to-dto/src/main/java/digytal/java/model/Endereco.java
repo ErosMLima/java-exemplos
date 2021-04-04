@@ -46,5 +46,10 @@ public class Endereco {
 	public void setLocalidade(String localidade) {
 		this.localidade = localidade;
 	}
+	@Override
+	public String toString() {
+		return "Endereco - ENTIDADE [cep=" + cep + ", logradouro=" + logradouro + ", bairro=" + bairro + ", localidade="
+				+ localidade + "]";
+	}
 	
 }
