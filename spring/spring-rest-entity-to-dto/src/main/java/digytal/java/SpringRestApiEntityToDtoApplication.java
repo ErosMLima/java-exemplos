@@ -9,10 +9,10 @@ import digytal.java.model.Endereco;
 import digytal.java.repository.EnderecoRepository;
 
 @SpringBootApplication
-public class SpringJpaRestApiApplication {
+public class SpringRestApiEntityToDtoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringJpaRestApiApplication.class, args);
+		SpringApplication.run(SpringRestApiEntityToDtoApplication.class, args);
 	}
 	
 	@Bean

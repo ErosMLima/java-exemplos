@@ -82,7 +82,7 @@ A configuração do Swagger é bem simples, você só precisar criar um **@Bean*
 
 #### Iniciando a aplicação
 
-1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
+1. Execute a classe `digytal.java.SpringRestApiJpaApplication`: A aplicação será iniciada.
    * Esta classe contém um Bean que realizar uma instrução de exemplo de inclusão de Endereço.
    ```
 	@Bean

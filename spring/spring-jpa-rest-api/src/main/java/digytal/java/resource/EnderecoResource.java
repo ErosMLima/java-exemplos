@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import digytal.java.model.Endereco;
 import digytal.java.repository.EnderecoFakeRepository;
+import digytal.java.repository.EnderecoRepository;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
@@ -24,14 +25,15 @@ import io.swagger.annotations.ApiResponses;
 @RequestMapping("/enderecos")
 public class EnderecoResource {
 	@Autowired
-	private EnderecoFakeRepository repository;
+	private EnderecoRepository repository;
+	
 	
 	@ApiOperation(value = "Retorna uma lista de endereços")
 	@ApiResponses(value = {
 	        @ApiResponse(code = 200, message = "Operação realizada com sucesso",response = Endereco.class)
 	})
 	@GetMapping
-	public List<Endereco> get(){
+	public Iterable<Endereco> get(){
 		return repository.findAll();
 	}
 	
@@ -41,6 +43,8 @@ public class EnderecoResource {
 	})
 	@GetMapping(path = "/{cep}")
 	public Endereco get(@PathVariable("cep") String cep){
+		//Como CEP é a chave poderia ter findById
+		//return repository.findById(cep).orElse(null);
 		return repository.findByCep(cep);
 	}
 	
@@ -59,7 +63,7 @@ public class EnderecoResource {
 	})
 	@PutMapping
 	public void put(@RequestBody(required = true) Endereco endereco){
-		repository.update(endereco);
+		repository.save(endereco);
 	}
 	
 	@ApiOperation(value = "Remove um endereço passando o cep na URL ex.: /enderecos/65300123")
@@ -68,7 +72,7 @@ public class EnderecoResource {
 	})
 	@DeleteMapping(path = "/{cep}")
 	public void delete(@ApiParam(value = "Número do Cep", required = true) @PathVariable("cep") String cep){
-		repository.remove(cep);
+		repository.deleteById(cep);
 	}
 	
 	@ApiOperation(value = "Remove um endereço passando cep o como parametro ex.: /enderecos?cep=65300123")
@@ -77,6 +81,6 @@ public class EnderecoResource {
 	})
 	@DeleteMapping()
 	public void deleteParam(@ApiParam(value = "Número do Cep", required = true) @RequestParam("cep") String cep){
-		repository.remove(cep);
+		repository.deleteById(cep);
 	}
 }
