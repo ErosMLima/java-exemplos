@@ -39,6 +39,7 @@ public class SwaggerConfig {
 		Docket docket = new Docket(DocumentationType.SWAGGER_2);
  
 		docket
+		.globalOperationParameters(params)
 		.select()
 		.apis(RequestHandlerSelectors.basePackage("digytal.java.resource"))
 		.paths(PathSelectors.any())

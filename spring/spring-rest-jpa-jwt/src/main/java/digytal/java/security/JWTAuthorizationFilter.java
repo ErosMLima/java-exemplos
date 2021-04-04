@@ -21,6 +21,7 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 		//obtem o token da request com AUTHORIZATION
 		String token =  request.getHeader(JWTUtils.HEADER_AUTHORIZATION);
 		
+		//esta implementação só esta validando a integridade do token
 		if(token!=null && !token.isEmpty()) {
 			JWTObject object = JWTUtils.object(token);
 			

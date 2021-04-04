@@ -12,7 +12,7 @@ import io.jsonwebtoken.UnsupportedJwtException;
 
 public class JWTUtils {
 	public static final String KEY = "SECRET_KEY";
-	public static final String PREFIX = "Bearer";
+	public static final String PREFIX = "Bearer ";
 	public static final long TOKEN_EXPIRATION =  1 * 60 * 60 * 1000; //1 hora
 	public static final String HEADER_AUTHORIZATION = "Authorization";
 	
@@ -24,11 +24,12 @@ public class JWTUtils {
                 .setExpiration(expriration)
                 .signWith(SignatureAlgorithm.HS512, KEY)
                 .compact();
-		return PREFIX + " " + token;
+		return PREFIX + token;
 	}
 	public static JWTObject object(String token) {
 		JWTObject object = null;
 		try {
+			token = token.replace(PREFIX, "");
 			Claims claims = Jwts.parser()
 					   .setSigningKey(KEY)
 					   .parseClaimsJws(token)
