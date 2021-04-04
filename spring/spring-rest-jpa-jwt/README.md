@@ -87,10 +87,11 @@ private static final String[] SWAGGER_WHITELIST = {
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-jpa-jwt/src/main/resources/jwt-core-utils.png)
 
 - Com a segurança devidamente configurada, vamos criar nosso token com base em um usuário do banco de dados.
-
-
-
-
+- Surgirá novas classes que representarão o usuário e as ações de interação com o banco de dados, são elas.
+  1. digytal.java.model.Login
+  1. digytal.java.repository.LoginRepository
+  1. digytal.java.service.LoginService
+  2. digytal.java.resource.LoginResource 
 #### Iniciando a aplicação
 
 1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
@@ -124,9 +125,6 @@ POST: http://localhost:8080/enderecos
 
 > Deverá retornar status 200
 
-3. Digite no navegador `http://localhost:8080/h2-console/`
 
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-jpa-rest-api/src/main/resources/h2.png)
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/select.png)
 
 
