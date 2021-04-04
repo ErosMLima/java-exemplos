@@ -23,6 +23,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Service: camada que contém regras de negócio e lógica de conversão e validação de persistência
 - Resource: também chamado de Controller foi onde definimos a exposição dos recursos via API por meio da definição dos endpoints
 - Config: onde definimos as configurações do Swagger para documentar a API, nosso @Bean ModelMapper para converter Entity to Dto e agora o PasswordEncoder para criptografar a senhas.
+- Security: Definimos toda a configuração necessária atuar com Spring Security e JWT.
 
 #### Como habilitar o Spring Security e JWT
 
@@ -44,7 +45,7 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 
 Veja a classe: `digytal.java.config.Beans`
 
-#### Configuração do Banco para usar o Spring Data Jpa
+#### Configurando o Spring Security com JWT
 
 ##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
