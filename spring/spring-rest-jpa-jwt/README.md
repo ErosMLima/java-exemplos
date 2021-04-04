@@ -93,6 +93,11 @@ private static final String[] SWAGGER_WHITELIST = {
   1. digytal.java.service.LoginService
   1. digytal.java.resource.LoginResource
   1. digytal.java.dto.Sessao
+- Modificamos a classe `digytal.java.config.SwaggerConfig` para começar a permitir um parametro `Authorization`
+- Implementamos a verificação dos dados Login na requisição com base nas informações que estão no banco de dados.
+	
+
+
 #### Iniciando a aplicação
 
 1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
