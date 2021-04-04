@@ -47,6 +47,13 @@ Veja a classe: `digytal.java.config.Beans`
 
 #### Configurando o Spring Security com JWT
 
+1. Criamos a classe `digytal.java.security.WebSecurityConfig` que contém toda a configuração de segurança necessária.
+1. Criamos a classe `digytal.java.security.JWTConstants` que contém parametros de segurança como: {KEY:Chave de Criptografia, PREFIX:Prefixo Token, TOKEN_EXPIRATION:Tempo expiração do Token}. 
+
+
+
+
+
 ##### Precisamos adicionar duas novas dependencias em nosso projeto: O starter do Spring Data Jpa e o banco de sua preferencia, no exemplo estamos usando o H2
 
 ```
