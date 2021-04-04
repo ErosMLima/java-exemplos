@@ -19,6 +19,7 @@ Projeto Spring para demonstração do uso de Springboot, ModelMapper, API Rest e
 #### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
+- Dto: onde definimos as classes que reperesentam modelo de nossas requisições e respostas HTTP.
 - Repository: onde definimos o JPA para acessar os dados do BD
 - Service: camada que contém regras de negócio e lógica de conversão e validação de persistência
 - Resource: também chamado de Controller foi onde definimos a exposição dos recursos via API por meio da definição dos endpoints
@@ -51,6 +52,7 @@ Veja a classe: `digytal.java.config.Beans`
 - Criamos a classe `digytal.java.security.JWTConstants` que contém parametros de segurança como: {KEY:Chave de Criptografia, PREFIX:Prefixo Token, TOKEN_EXPIRATION:Tempo expiração do Token}. 
 - Criamos a classe `digytal.java.security.JWTAuthorizationFilter` que é responsável para analisar o token recebido e aplicar as regras de validação implementada.
 - Criamos a classe `digytal.java.security.JWTUtils` que nos auxiliará a criar token e depois obter os dados do token nas requisições
+- Criamos a classe `digytal.java.security.JWTObject` esta classe representa um Objeto representando pelo JWT em sua criação. **O JWT encripta um objeto qualquer com uma convenção de subject, authorities, createDate, expirationDate**
 
 ##### Considerações:
 1. Na classe `digytal.java.security.WebSecurityConfig` utilizamos as anotações abaixo para determinar ao Spring que as configurações de segurança serão de forma manual:
