@@ -11,8 +11,8 @@ Projeto Spring para demonstração do uso de Springboot, ModelMapper, API Rest e
 - [Gleyson Sampaio](https://github.com/glysns)
 
 #### Requisitos
-###### 1. [Criando uma Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-api)
-###### 1. [Criando uma JPA Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-jpa-rest-api)
+###### [Criando uma Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-rest-api)
+###### [Criando uma JPA Rest API com Springboot](https://github.com/glysns/java-exemplos/tree/main/spring/spring-jpa-rest-api)
 
 
 #### Estrutura do Projeto
