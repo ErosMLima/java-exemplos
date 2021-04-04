@@ -2,9 +2,9 @@
 www.digytal.com.br
 (11) 95894 0362
 
-## Springboot - Web API - Exemplos de Request
+## Springboot - Rest API 
 
-Projeto Spring para demonstração do uso de Springboot e requisições Web
+Projeto Spring para demonstração do uso de Springboot para criar uma Rest API.
 
 #### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
