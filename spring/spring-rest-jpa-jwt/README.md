@@ -91,7 +91,8 @@ private static final String[] SWAGGER_WHITELIST = {
   1. digytal.java.model.Login
   1. digytal.java.repository.LoginRepository
   1. digytal.java.service.LoginService
-  2. digytal.java.resource.LoginResource 
+  1. digytal.java.resource.LoginResource
+  1. digytal.java.dto.Sessao
 #### Iniciando a aplicação
 
 1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
