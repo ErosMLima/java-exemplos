@@ -24,17 +24,23 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 - Resource: também chamado de Controller foi onde definimos a exposição dos recursos via API por meio da definição dos endpoints
 - Config: onde definimos as configurações do Swagger para documentar a API, nosso @Bean ModelMapper para converter Entity to Dto e agora o PasswordEncoder para criptografar a senhas.
 
-#### Como habilitar conversão entre Entity to Dto
+#### Como habilitar o Spring Security e JWT
 
-##### Precisamos adicionar a dependência do ModelMapper, um framework que realiza conversão de objetos.
+##### Precisamos adicionar as dependências do Spring Security e JWT conforme código abaixo.
 ```
+<!-- SPRING SECURITY -->
 <dependency>
-    <groupId>org.modelmapper</groupId>
-    <artifactId>modelmapper</artifactId>
-    <version>2.3.5</version>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+<!-- JWT -->
+<dependency>
+	<groupId>io.jsonwebtoken</groupId>
+	<artifactId>jjwt</artifactId>
+	<version>0.7.0</version>
 </dependency>
 ```
-##### Para não criar este conversor toda vez, vamos criar um Bean no Spring.
+##### Para disponibilizar uma instancia de PasswordEndecor para o Spring criamos um Bean de PasswordEndecor.
 
 Veja a classe: `digytal.java.config.Beans`
 
