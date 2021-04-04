@@ -59,7 +59,7 @@ Com SprinDataJpa é abstraído todo o algorítimo de persistência necessária p
 
 ##### Criando o service `digytal.java.service.EnderecoService` que é a classe que contém toda regra de negócio, validação e conversão que será utilizada no nosso `digytal.java.resource.EnderecoResource`
 
-IMAGEM
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/converter-service.png)
 
 ##### Agora precisamos informar os dados de conexão no arquivo `application.properties`
   * Habilitar o H2 Console em http://localhost:8080/h2-console:
@@ -113,9 +113,9 @@ A configuração do Swagger é bem simples, você só precisar criar um **@Bean*
    
 3. Digite no navegador `http://localhost:8080/swagger-ui.html`
 
-##### Será disponível a pagina do Swagger exibindo todos os recursos da API.
+##### Será disponível a pagina do Swagger exibindo todos os recursos da API e POST para adicionar Endereço via Dto.
 
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-api/src/main/resources/swagger.png)
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/swagger-dto.png)
 
 ##### Realizando um teste de cadastro de CEP
 ```
@@ -133,6 +133,6 @@ POST: http://localhost:8080/enderecos
 3. Digite no navegador `http://localhost:8080/h2-console/`
 
 ![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-jpa-rest-api/src/main/resources/h2.png)
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-jpa-rest-api/src/main/resources/h2-console.png)
+![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-entity-to-dto/src/main/resources/select.png)
 
 
