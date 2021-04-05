@@ -4,19 +4,19 @@ www.digytal.com.br
 
 ## Springboot - Rest API 
 
-Projeto Spring para demonstração do uso de Springboot para criar uma Rest API.
+Projeto Spring para demonstração do uso de Springboot o Apache POI.
+
+**NOTA: NÃO é necessário o projeto ser Springboot para uso do Apache POI **
 
 #### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
 #### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
-- Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
-- Repository: onde definimos o JPA para acessar os dados do BD ou Repositorio Fake
-- Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
-- Config: onde definimos as configurações do Swagger para documentar a API
+- Model: Classes que represetam o modelo da aplicação na qual é necessário criar através da leitura do arquivo
+- Util: pacote que contém a classe `digytal.java.util.ExcelResultSet` com toda lógica de leitura de arquivo.
 
-#### Configuração do Swagger
+> ExcelResultSet: Definição de uma classe Utilitária que lê registros através de uma planilha Excel com base na estrutura JDBC ResultSet
 
 A configuração do Swagger é bem simples, você só precisar criar um **@Bean** de **Docket** conforme a classe `digytal.java.config.SwaggerConfig`.
 
