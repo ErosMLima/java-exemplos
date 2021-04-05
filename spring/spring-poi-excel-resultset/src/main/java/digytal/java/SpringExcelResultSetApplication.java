@@ -13,10 +13,10 @@ import digytal.java.model.Sexo;
 import digytal.java.util.ExcelResultSet;
 
 @SpringBootApplication
-public class SpringRestApiApplication {
+public class SpringExcelResultSetApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringRestApiApplication.class, args);
+		SpringApplication.run(SpringExcelResultSetApplication.class, args);
 	}
 	@Bean
 	public CommandLineRunner run() throws Exception {
