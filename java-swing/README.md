@@ -10,5 +10,4 @@ Projeto open source para demonstrar recursos e exemplos utilizando a linguagem J
 |Projeto         |Descrição                      
 |----------------|-------------------------------
 |[desktop-utils](https://github.com/glysns/java-exemplos/tree/main/java-swing/desktop-utils)|Biblioteca de componentes para desenvolvimento desktop com Java Swing
-|[jdbc-jpa](https://github.com/glysns/java-exemplos/tree/main/jdbc-jpa)|Projeto com a finalidade de apresentar exemplos de uso de JDBC e JPA
-|[spring-framework](https://github.com/glysns/java-exemplos/tree/main/spring)|Exemplos de projetos desenvolvidos com Spring Framework
+|[desktop-sample](https://github.com/glysns/java-exemplos/tree/main/java-swing/desktop-sample)|Exemplo de um projeto java utilizando a biblioteca Desktop Utils
