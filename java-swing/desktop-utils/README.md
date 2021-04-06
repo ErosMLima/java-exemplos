@@ -34,5 +34,10 @@ grade.setValue(entidades);
 
 combo.setItens(entidades, "nome");
 ```
+#### Configuração do WindowBuilder (Editor Visual de Telas para Eclipse)
+
+> NOTA 1: Mude o nome do pacote onde estão localizados os resources conforme linha 27.
+**Help -> Install New Software**
+http://download.eclipse.org/windowbuilder/latest/
 
 #### Para testar o uso dos componentes siga o exemplo do projeto: [desktop-sample](https://github.com/glysns/java-exemplos/tree/main/java-swing/desktop-sample)
