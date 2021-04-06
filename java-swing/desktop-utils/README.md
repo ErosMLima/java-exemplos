@@ -21,32 +21,18 @@ Em Java os camponentes desktop também são classes com a finalidade de gerar in
 - SSCabecalho
 - SSRodape
 
-#### Configuração do WindowBuilder (Editor Visual de Telas para Eclipse)
-
-**Help -> Install New Software**
-http://download.eclipse.org/windowbuilder/latest/
-
-![](https://github.com/glysns/java-exemplos/blob/main/java-swing/desktop-utils/src/main/resources/window-builder-install.png)
-
-
-#### Iniciando a aplicação
-
-1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
-1. Digite no navegador `http://localhost:8080/swagger-ui.html`
-
-##### Será disponível a pagina do Swagger exibindo todos os recursos da API.
-
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-api/src/main/resources/swagger.png)
-
-##### Realizando um teste de cadastro de CEP
+* Para o componente SSBotao, o mesmo usa imagem como icone conforme Label - setText() compatível com o arquivo `.png` existente em `/resources/img`
+* Para componentes do tipo `Grade` ou `Combo` os mesmos recebem Array ou List e no caso do combo o mesmo recebe um segundo parametro `campoExibicao` para informar qual atributo da classe será exibido.
 ```
-POST: http://localhost:8080/enderecos
-{
-  "bairro": "Norte",
-  "cep": "65180000",
-  "localidade": "Humberto de Campos",
-  "logradouro": "Rua da Consolação"
-}
+List<Entidade> entidades = new ArrayList<Entidade>();
+entidades.add(new Entidade(1, "FRANK MARLON"));
+entidades.add(new Entidade(2, "RAIMUNDO BRANCO"));
+entidades.add(new Entidade(3, "GLEYSON SAMPAIO"));
+entidades.add(new Entidade(4, "RAFAEL ALUNO"));
+
+grade.setValue(entidades);
+
+combo.setItens(entidades, "nome");
 ```
 
-> Deverá retornar status 200
+#### Para testar o uso dos compentes siga o exemplo do projeto: [desktop-sample](https://github.com/glysns/java-exemplos/tree/main/java-swing/desktop-sample)
