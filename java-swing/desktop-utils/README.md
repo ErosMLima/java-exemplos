@@ -2,27 +2,31 @@
 www.digytal.com.br
 (11) 95894 0362
 
-## Springboot - Rest API 
+## Java Desktop Utils
 
-Projeto Spring para demonstração do uso de Springboot para criar uma Rest API.
+Biblioteca de componentes para desenvolvimento desktop com Java Swing.
 
 #### Colaboradores
+- [Frank Marlon](https://github.com/fmarlon)
 - [Gleyson Sampaio](https://github.com/glysns)
 
-#### Estrutura do Projeto
-Dividimos as classes em pacotes de acordo com suas responsabilidades.
-- Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
-- Repository: onde definimos o JPA para acessar os dados do BD ou Repositorio Fake
-- Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
-- Config: onde definimos as configurações do Swagger para documentar a API
+#### Principais Compenentes
+Em Java os camponentes desktop também são classes com a finalidade de gerar interface gráfica.
 
-#### Configuração do Swagger
+- SSBotao
+- SSCampoTexto
+- SSCampoDataHora
+- SSCaixaCombinacao
+- SSGrade
+- SSCabecalho
+- SSRodape
 
-A configuração do Swagger é bem simples, você só precisar criar um **@Bean** de **Docket** conforme a classe `digytal.java.config.SwaggerConfig`.
+#### Configuração do WindowBuilder (Editor Visual de Telas para Eclipse)
 
-> NOTA 1: Mude o nome do pacote onde estão localizados os resources conforme linha 27.
+**Help -> Install New Software**
+http://download.eclipse.org/windowbuilder/latest/
 
-> NOTA 2: Avalie as anotações do Swagger existentes nas classes `digytal.java.model.Endereco` e `digytal.java.resource.EnderecoResource`, estas anotações ajudam a documentar a API com o Swagger
+![](https://github.com/glysns/java-exemplos/blob/main/java-swing/desktop-utils/src/main/resources/window-builder-install.png)
 
 
 #### Iniciando a aplicação
