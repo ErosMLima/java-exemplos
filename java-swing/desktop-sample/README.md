@@ -2,47 +2,34 @@
 www.digytal.com.br
 (11) 95894 0362
 
-## Springboot - Rest API 
+## Java Desktop Utils
 
-Projeto Spring para demonstração do uso de Springboot para criar uma Rest API.
+Exemplo de um projeto java utilizando a biblioteca Desktop Utils
 
 #### Colaboradores
 - [Gleyson Sampaio](https://github.com/glysns)
 
 #### Estrutura do Projeto
 Dividimos as classes em pacotes de acordo com suas responsabilidades.
-- Model: onde definimos os modelos ou seja as classes dos objetos que usamos no sistema
-- Repository: onde definimos o JPA para acessar os dados do BD ou Repositorio Fake
-- Resource: também chamado de Controller foi onde definimos a exponsição dos recursos via API por meio da definição dos endpoints
-- Config: onde definimos as configurações do Swagger para documentar a API
+- Form: Classes que representam Formularios na aplicação
+- Util: Classes utilitárias para exemplo
 
-#### Configuração do Swagger
+#### Dependência do Desktop - pom.xml
+```
+<dependency>
+  <groupId>digytal-java-exemplos</groupId>
+  <artifactId>desktop-utils</artifactId>
+  <version>1.0</version>
+</dependency>
+```
 
-A configuração do Swagger é bem simples, você só precisar criar um **@Bean** de **Docket** conforme a classe `digytal.java.config.SwaggerConfig`.
-
-> NOTA 1: Mude o nome do pacote onde estão localizados os resources conforme linha 27.
-
-> NOTA 2: Avalie as anotações do Swagger existentes nas classes `digytal.java.model.Endereco` e `digytal.java.resource.EnderecoResource`, estas anotações ajudam a documentar a API com o Swagger
-
+> NOTA 1: Recomendamos estudar sobre Swing Layouts
+> NOTA 2: Ilustramos os principais componentes e suas propriedades, mas não todas.
 
 #### Iniciando a aplicação
 
-1. Execute a classe `digytal.java.SpringRestApiApplication`: A aplicação será iniciada.
-1. Digite no navegador `http://localhost:8080/swagger-ui.html`
-
-##### Será disponível a pagina do Swagger exibindo todos os recursos da API.
-
-![](https://github.com/glysns/java-exemplos/blob/main/spring/spring-rest-api/src/main/resources/swagger.png)
-
-##### Realizando um teste de cadastro de CEP
-```
-POST: http://localhost:8080/enderecos
-{
-  "bairro": "Norte",
-  "cep": "65180000",
-  "localidade": "Humberto de Campos",
-  "logradouro": "Rua da Consolação"
-}
-```
-
-> Deverá retornar status 200
+1. Execute a classe `digytal.java.desktop.DigytalJavaDesktopSample`: A aplicação será iniciada.
+1. Uma tela que representa a janela principal com menu será exibida
+1. Clica Menu -> Cadastro -> Exemplo
+1. Exibirá a tela de consulta com componentes de Grade e Botões com ícones
+2. Depois clicar em novo para exibir a tela de formulário com alguns campos de exemplo.
