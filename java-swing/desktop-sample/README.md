@@ -32,4 +32,6 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 1. Uma tela que representa a janela principal com menu será exibida
 1. Clica Menu -> Cadastro -> Exemplo
 1. Exibirá a tela de consulta com componentes de Grade e Botões com ícones
-2. Depois clicar em novo para exibir a tela de formulário com alguns campos de exemplo.
+1. Depois clicar em novo para exibir a tela de formulário com alguns campos de exemplo.
+
+![](https://github.com/glysns/java-exemplos/blob/main/java-swing/desktop-sample/src/main/resources/telas.png)
