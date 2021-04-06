@@ -1,11 +1,11 @@
-# Digytal - Treinamento, Consultoria e Fábrica de Software
+# Digytal - ProgramaÃ§Ã£o, Pesquisa e EducaÃ§Ã£o
 www.digytal.com.br
 (11) 95894 0362
 
-# Java Exemplos - Coleções
+# Java Exemplos - ColeÃ§Ãµes
 
-Projeto open source para demonstrar exemplo de persistência com JDBC e JPA
+Projeto open source para demonstrar exemplo de persistÃªncia com JDBC e JPA
 
-> Este repositório tem como finalidade apresentar os recursos de persistência com JDBC e JPA
+> Este repositÃ³rio tem como finalidade apresentar os recursos de persistÃªncia com JDBC e JPA
 
 - Execute a classe `digytal.java.exemplos.jdbcjpa.ExemploJdbcJpa`.
