@@ -28,7 +28,7 @@ public class FormularioConsulta extends JPanel {
 	private SSCaixaCombinacao combo = new SSCaixaCombinacao(); 
 	private JScrollPane scroll;
 	public FormularioConsulta() {
-		setSize(400,400);
+		setSize(500,400);
 		cabecalho.setTitulo("Formulario Consulta");
 		cabecalho.setDescricao("Exemplo de Formulario de Consulta");
 		bSair.setText("Fechar");
