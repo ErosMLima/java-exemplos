@@ -1,4 +1,4 @@
-# Digytal - Treinamento, Consultoria e Fábrica de Software
+# Digytal - Programação, Pesquisa e Educação
 www.digytal.com.br
 (11) 95894 0362
 
