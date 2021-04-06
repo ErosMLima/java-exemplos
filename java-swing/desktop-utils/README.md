@@ -39,6 +39,7 @@ combo.setItens(entidades, "nome");
 1. http://download.eclipse.org/windowbuilder/latest/
 
 ![](https://github.com/glysns/java-exemplos/blob/main/java-swing/desktop-utils/src/main/resources/window-builder-install.png)
+![](https://github.com/glysns/java-exemplos/blob/main/java-swing/desktop-utils/src/main/resources/wb_summary_shot.gif)
 
 
 #### Para testar o uso dos componentes siga o exemplo do projeto: [desktop-sample](https://github.com/glysns/java-exemplos/tree/main/java-swing/desktop-sample)
