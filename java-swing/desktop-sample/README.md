@@ -23,8 +23,8 @@ Dividimos as classes em pacotes de acordo com suas responsabilidades.
 </dependency>
 ```
 
-> NOTA 1: Recomendamos estudar sobre Swing Layouts
-> NOTA 2: Ilustramos os principais componentes e suas propriedades, mas não todas.
+* NOTA 1: Recomendamos estudar sobre Swing Layouts
+* NOTA 2: Ilustramos os principais componentes e suas propriedades, mas não todas.
 
 #### Iniciando a aplicação
 
