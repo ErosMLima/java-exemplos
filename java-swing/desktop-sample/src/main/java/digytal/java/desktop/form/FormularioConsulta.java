@@ -14,6 +14,7 @@ import digytal.java.desktop.util.Entidade;
 import digytal.java.desktop.util.FormularioUtil;
 import digytal.util.desktop.ss.SSBotao;
 import digytal.util.desktop.ss.SSCabecalho;
+import digytal.util.desktop.ss.SSCaixaCombinacao;
 import digytal.util.desktop.ss.SSGrade;
 import digytal.util.desktop.ss.SSRodape;
 
@@ -23,7 +24,8 @@ public class FormularioConsulta extends JPanel {
 	private SSBotao bSair = new SSBotao();
 	private SSBotao bNovo = new SSBotao();
 	private SSBotao bAlterar = new SSBotao();
-	private SSGrade tabela = new SSGrade();
+	private SSGrade grade = new SSGrade();
+	private SSCaixaCombinacao combo = new SSCaixaCombinacao(); 
 	private JScrollPane scroll;
 	public FormularioConsulta() {
 		setSize(400,400);
@@ -46,19 +48,20 @@ public class FormularioConsulta extends JPanel {
 		rodape.add(bNovo);
 		rodape.add(bAlterar);
 		rodape.add(bSair);
+		rodape.add(combo);
 		
 		
-		tabela.getModeloTabela().addColumn("ID");
-		tabela.getModeloTabela().addColumn("Nome");
+		grade.getModeloTabela().addColumn("ID");
+		grade.getModeloTabela().addColumn("Nome");
 		
-		tabela.getModeloColuna().getColumn(0).setPreferredWidth(30);
-		tabela.getModeloColuna().getColumn(1).setPreferredWidth(350);
+		grade.getModeloColuna().getColumn(0).setPreferredWidth(30);
+		grade.getModeloColuna().getColumn(1).setPreferredWidth(350);
 		
-		tabela.getModeloColuna().setCampo(0, "id");
-		tabela.getModeloColuna().setCampo(1, "nome");
+		grade.getModeloColuna().setCampo(0, "id");
+		grade.getModeloColuna().setCampo(1, "nome");
 		
 		scroll = new JScrollPane();
-		scroll.setViewportView(tabela);
+		scroll.setViewportView(grade);
 		add(scroll,BorderLayout.CENTER);
 		
 		List<Entidade> entidades = new ArrayList<Entidade>();
@@ -67,7 +70,10 @@ public class FormularioConsulta extends JPanel {
 		entidades.add(new Entidade(3, "GLEYSON SAMPAIO"));
 		entidades.add(new Entidade(4, "RAFAEL ALUNO"));
 		
-		tabela.setValue(entidades);
+		grade.setValue(entidades);
+		
+		combo.setItens(entidades, "nome");
+		
 		
 	}
 }
