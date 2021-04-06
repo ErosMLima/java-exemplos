@@ -35,4 +35,4 @@ grade.setValue(entidades);
 combo.setItens(entidades, "nome");
 ```
 
-#### Para testar o uso dos compentes siga o exemplo do projeto: [desktop-sample](https://github.com/glysns/java-exemplos/tree/main/java-swing/desktop-sample)
+#### Para testar o uso dos componentes siga o exemplo do projeto: [desktop-sample](https://github.com/glysns/java-exemplos/tree/main/java-swing/desktop-sample)
