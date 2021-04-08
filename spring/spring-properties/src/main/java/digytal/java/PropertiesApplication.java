@@ -18,6 +18,8 @@ public class PropertiesApplication {
         	ftp.conectar();
         	email.enviar();
 			System.out.println("Fim do processo");
+			System.out.println("Ola mundo");
+
 		};
     }
 }
