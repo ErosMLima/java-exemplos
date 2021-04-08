@@ -1,4 +1,4 @@
-# Digytal - Treinamento, Consultoria e Fábrica de Software
+# Digytal - Programação, Pesquisa e Educação
 www.digytal.com.br
 (11) 95894 0362
 
@@ -7,5 +7,5 @@ Projeto open source para demonstrar a instanciação de uma classe via applicati
 
 ### Inicialização
 
-- Execute a classe `digytal.springdicas.PropertiesApplication` .
+- Execute a classe `digytal.java.PropertiesApplication` .
 

@@ -1,4 +1,4 @@
-package digytal.springdicas;
+package digytal.java;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

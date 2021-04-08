@@ -1,4 +1,4 @@
-package digytal.springdicas;
+package digytal.java;
 
 import java.util.List;
 
@@ -17,5 +17,6 @@ public class EmailService {
 	public void enviar() {
 		System.out.println("Remetente:" + remetente);
 		System.out.println("Destinatarios:" + destinatarios);
+		System.out.println("Email enviado com sucesso");
 	}
 }

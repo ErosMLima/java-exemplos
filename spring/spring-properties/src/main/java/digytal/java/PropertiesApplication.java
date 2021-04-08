@@ -1,4 +1,4 @@
-package digytal.springdicas;
+package digytal.java;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -14,6 +14,7 @@ public class PropertiesApplication {
 	@Bean
     public CommandLineRunner run(FtpService ftp, EmailService email) {
         return args -> {
+			System.out.println("Iniciando a leitura do applications.properties");
         	ftp.conectar();
         	email.enviar();
         };
