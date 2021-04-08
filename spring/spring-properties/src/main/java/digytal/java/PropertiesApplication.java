@@ -17,6 +17,7 @@ public class PropertiesApplication {
 			System.out.println("Iniciando a leitura do applications.properties");
         	ftp.conectar();
         	email.enviar();
-        };
+			System.out.println("Fim do processo");
+		};
     }
 }
