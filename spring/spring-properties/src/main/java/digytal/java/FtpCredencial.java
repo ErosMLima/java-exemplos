@@ -35,5 +35,4 @@ public class FtpCredencial {
 	public void setPort(Integer port) {
 		this.port = port;
 	}
-	
 }

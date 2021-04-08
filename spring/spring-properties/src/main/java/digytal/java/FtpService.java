@@ -18,4 +18,5 @@ public class FtpService {
 		
 		System.out.println(String.format("\n\nConectando ao serviço FTP: host: %s, port: %d, user: %s, password: %s", credencial.getHost(), credencial.getPort(), credencial.getUser(),credencial.getPass()));
 	}
+
 }
